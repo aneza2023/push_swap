@@ -2,10 +2,11 @@
 # define PUSH_SWAP_H
 
 # include <stdio.h>
-# include <stdlib.h>
-# include <stdint.h>
 # include <unistd.h>
-# include <fcntl.h>
-# include <stddef.h>
+
+//commands
+sa
+sr
+..
 
 #endif

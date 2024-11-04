@@ -4,9 +4,13 @@
 # include <stdio.h>
 # include <unistd.h>
 
-//commands
-sa
-sr
-..
+//  INPUT FT_PRINTF
+//  INPUT LIBFT FOR ATOI
+
+typedef struct node {
+    int value;
+    struct node *next;
+} t_node;
+
 
 #endif

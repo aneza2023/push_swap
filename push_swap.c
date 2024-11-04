@@ -1,55 +1,56 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/04 10:20:10 by codespace         #+#    #+#             */
+/*   Updated: 2024/11/04 13:50:24 by codespace        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 
-int	ft_atoi(char *nptr)
+int	main(int argc, char *argv[])
 {
-	int	i;
-	int	result;
-	int	sign;
-
-	i = 0;
-	result = 0;
-	sign = 1;
-	while ((nptr[i] == 32) || (nptr[i] <= 13 && nptr[i] >= 9))
-		i++;
-	if (nptr[i] == '-')
-	{
-		sign = sign * (-1);
-		i++;
+	int i;
+	int arg;
+	t_node *node;
+	t_node *new_node;
+	t_node *current;
+	
+	if (argc <= 1){
+		printf("Numbers for swap_push were not provided\n");
+		return (1);
 	}
-	else if (nptr[i] == '+')
-		i++;
-	while (nptr[i] <= '9' && nptr[i] >= '0')
-	{
-		result = result * 10 + nptr[i] - '0';
-		i++;
+	i = 1;
+	node = NULL;
+	while (i != argc){
+		arg = atoi(argv[i]);
+		new_node = (t_node *)malloc(sizeof(t_node));
+		if (new_node == NULL){
+			printf("Allocation failed");
+			return (NULL);
+		}
+		new_node->value = arg;
+		new_node->next = NULL;
+		if (node == NULL)
+			node = new_node;
+		else {
+			current = node;
+			while (current->next != NULL)
+				current = current->next;
+			current->next = new_node;
+		}
 	}
-	return (result * sign);
+	while (current != NULL){
+		printf("%d", current->value);
+		current = current -> next;
+	}
+	return (0);
 }
 
-int main(int argc, char *argv[])
-{
-    int     *stacka;
-    int     *stackb;
-    int     *alloc_stack;
-    int     i;
-
-    i = 0;
-    stacka = (int *)malloc(argc * sizeof(int));
-    stackb = (int *)malloc(argc * sizeof(int));
-    if (stacka == NULL || stackb == NULL )
-        return (1);
-    while (i <= argc){
-        stacka[i] = ft_atoi(argv[i]);
- //       stacka[i] = argv[i];
-        i++;
-    }
-    i = 0;
-    while (i < argc){
-        printf("%d\n", stacka[i]);
-        i++;
-    }
-    return (0);
-}
-
+// {}

@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 10:20:10 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/04 14:55:27 by codespace        ###   ########.fr       */
+/*   Created: 2024/11/04 14:52:36 by codespace         #+#    #+#             */
+/*   Updated: 2024/11/04 14:52:41 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	main(int argc, char *argv[])
-{
-	int i;
-	int arg;
-	t_node *node;
-	
-	if (argc <= 1){
-		printf("Numbers for swap_push were not provided\n");
-		return (1);
-	}
-	i = 1;
-	node = NULL;
-	while (i != argc){
-		arg = atoi(argv[i]);
-		node = inserting_arg(node, arg);
-		i++;	
-	} // created stack consisting of arguments
-	return (0);
-}
-// {}
+# include <stdarg.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <stdint.h>
+# include <stdlib.h>
+
+typedef struct node{
+    int value;
+    struct node *next;
+} t_node;
+
+t_node *inserting_arg(t_node *node, int arg);
+
+
+#endif

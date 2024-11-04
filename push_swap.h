@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:52:36 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/04 14:52:41 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/04 15:07:59 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@
 typedef struct node{
     int value;
     struct node *next;
-} t_node;
+} stack;
 
-t_node *inserting_arg(t_node *node, int arg);
+stack *inserting_arg(stack *stack_a, int arg);
 
 
 #endif

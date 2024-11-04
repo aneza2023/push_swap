@@ -1,6 +1,6 @@
 NAME = push_swap.a
 SOURCES =	push_swap.c\
-			creating_stack.c\
+			creating_stack_a.c\
 			
 OBJS = $(SOURCES:.c=.o)
 CC = cc

@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   creating_stack.c                                   :+:      :+:    :+:   */
+/*   creating_stack_a.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:36:36 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/04 14:39:12 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/04 15:07:02 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_node *inserting_arg(t_node *node, int arg)
+stack *inserting_arg(stack *stack_a, int arg)
 {
-	t_node *new_node;
+	stack *new_node;
 
-	new_node = (t_node*)malloc(sizeof(t_node));
+	new_node = (stack*)malloc(sizeof(stack));
 	if (new_node == NULL){
 		printf("Allocation failed");
-		return (node);
+		return (stack_a);
 	}
 	new_node->value = arg;
-	new_node->next = node;
+	new_node->next = stack_a;
 	return (new_node);
 }

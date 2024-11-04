@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:20:10 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/04 14:55:27 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/04 15:10:48 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,21 @@ int	main(int argc, char *argv[])
 {
 	int i;
 	int arg;
-	t_node *node;
+	stack *stack_a;
+//	stack *stack_b;
 	
 	if (argc <= 1){
 		printf("Numbers for swap_push were not provided\n");
 		return (1);
 	}
 	i = 1;
-	node = NULL;
+	stack_a = NULL;
+//	stack_b = NULL;
 	while (i != argc){
 		arg = atoi(argv[i]);
-		node = inserting_arg(node, arg);
+		stack_a = inserting_arg(stack_a, arg);
 		i++;	
-	} // created stack consisting of arguments
+	} // created stack a consisting of arguments input
 	return (0);
 }
 // {}

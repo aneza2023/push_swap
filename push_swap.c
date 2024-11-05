@@ -19,7 +19,8 @@ int	main(int argc, char *argv[])
 	stack *stack_a;
 //	stack *stack_b;
 	
-	if (argc <= 1){
+	// to do: prevent strings as input - split function maybe, check for repetition
+	if (argc <= 1 || (argc == 2 && !argv[1][0])){
 		printf("Numbers for swap_push were not provided\n");
 		return (1);
 	}
@@ -28,9 +29,13 @@ int	main(int argc, char *argv[])
 //	stack_b = NULL;
 	while (i != argc){
 		arg = atoi(argv[i]);
-		stack_a = inserting_arg(stack_a, arg);
+		stack_a = inserting_arg(stack_a, arg);	
 		i++;	
 	} // created stack a consisting of arguments input
+	while (stack_a != NULL){
+		printf("%d ->", stack_a->value);
+		stack_a = stack_a ->next;
+	}
 	return (0);
 }
 // {}

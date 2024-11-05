@@ -12,6 +12,7 @@
 
 #include "push_swap.h"
 
+// maybe could add a pointer to a previous node
 stack *inserting_arg(stack *stack_a, int arg)
 {
 	stack *new_node;

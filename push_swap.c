@@ -24,13 +24,13 @@ int	main(int argc, char *argv[])
 		printf("Numbers for swap_push were not provided\n");
 		return (1);
 	}
-	i = 1;
+	i = argc - 1;
 	stack_a = NULL;
 //	stack_b = NULL;
-	while (i != argc){
+	while (i >= 1 ){
 		arg = atoi(argv[i]);
 		stack_a = inserting_arg(stack_a, arg);	
-		i++;	
+		i--;	
 	} // created stack a consisting of arguments input
 	while (stack_a != NULL){
 		printf("%d ->", stack_a->value);

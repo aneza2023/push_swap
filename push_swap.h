@@ -25,6 +25,6 @@ typedef struct node{
 } stack;
 
 stack *inserting_arg(stack *stack_a, int arg);
-
+stack *swap_in_stack(stack *stack_a);
 
 #endif

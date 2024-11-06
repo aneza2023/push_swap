@@ -13,25 +13,24 @@ stack  *swap_in_stack(stack *stack_a)
 		return (stack_a);
 	}
     temp->value = stack_a->next->value;
-    temp->next =stack_a;
-stack_a = temp;
-
-        while (stack_a != NULL){
-		printf("NOVY: %d\n", stack_a->value);
+    temp->next = stack_a;
+    stack_a = temp;
+/*     while (stack_a != NULL){
+		printf("A: %d\n", stack_a->value);
 		stack_a = stack_a ->next;
-	} 
+	}  */
 // deleting 2nd
-    i = 0;
-    while (stack_a->next != NULL && i <= 2){
+    i = 1;
+    while (stack_a != NULL && i <= 1){
         stack_a = stack_a->next;
         i++;
     }
     stack_a->next = stack_a->next->next;
-/*     while (stack_a != NULL){
-		printf("NOVY: %d\n", stack_a->value);
+    while (stack_a != NULL){
+		printf("B: %d\n", stack_a->value);
 		stack_a = stack_a ->next;
-	}  */
-    return (stack_a); // melo by vratit kolem vymazane
+	} 
+    return (stack_a); 
 }
 
 /* stack  rotate_stack(stack **stack)

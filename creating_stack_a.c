@@ -27,7 +27,7 @@ stack *inserting_arg(stack *stack_a, int arg)
 	return (new_node);
 }
 
-stack	*match_input(stack *stack_a)
+/* stack	*match_input(stack *stack_a)
 {
 	
-}
+} */

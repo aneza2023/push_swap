@@ -22,6 +22,7 @@ stack *inserting_arg(stack *stack_a, int arg)
 		printf("Allocation failed");
 		return (stack_a);
 	}
+	new_node->prev = stack_a;
 	new_node->value = arg;
 	new_node->next = stack_a;
 	return (new_node);

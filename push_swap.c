@@ -33,13 +33,13 @@ int	main(int argc, char *argv[])
 		stack_a = inserting_arg(stack_a, arg);	
 		i--;	
 	} 
-//	swap_in_stack(stack_a);
-	rotate_stack(stack_a);
+//	stack_a = swap_in_stack(stack_a);
+	stack_a = rotate_stack(stack_a);
 // CHECK: PRINTING STACK
-/* 	while (stack_a != NULL){
+	while (stack_a != NULL){
 		printf("%d\n", stack_a->value);
 		stack_a = stack_a ->next;
-	}  */
+	} 
 	return (0);
 }
 // {}

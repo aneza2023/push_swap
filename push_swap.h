@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:52:36 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/04 15:07:59 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/10 21:34:03 by anezkahavra      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,14 @@
 typedef struct node{
     int value;
     struct node *next;
-    struct node *prev;
+//    struct node *prev;
 } stack;
 
 stack *inserting_arg(stack *stack_a, int arg);
 stack *swap_in_stack(stack *stack_a);
 stack *rotate_stack(stack *stack_a);
+stack *reverse_rotate(stack *stack_a);
+int   push_to_a(stack **stack_a, stack **stack_b);
+int   push_to_b(stack **stack_a, stack **stack_b);
 
 #endif

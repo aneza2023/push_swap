@@ -6,7 +6,7 @@
 /*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:20:10 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/10 21:36:29 by anezkahavra      ###   ########.fr       */
+/*   Updated: 2024/11/11 22:46:26 by anezkahavra      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,14 @@ int	main(int argc, char *argv[])
 		printf("Error\n");	
 		return (1);
 	}
-	if (not_number(*argv) == 0){
-		printf("Error\n");
-		return (1);
+	i = 1;
+	while (argv[i] != NULL){
+		if (not_number(argv[i]) == 1){
+			printf("Error\n");
+			return (1);
+		}
+		else
+			i++;
 	}
 //  CREATING STACK_A - MATCHES INPUT
 	i = argc - 1;

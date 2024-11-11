@@ -6,7 +6,7 @@
 /*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:52:36 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/10 21:34:03 by anezkahavra      ###   ########.fr       */
+/*   Updated: 2024/11/11 23:04:52 by anezkahavra      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ int   push_to_a(stack **stack_a, stack **stack_b);
 int   push_to_b(stack **stack_a, stack **stack_b);
 int	not_number(char *argv);
 int	ft_isalpha(int c);
-
+int	repetition(char *argv);
 #endif

@@ -26,6 +26,10 @@ int	main(int argc, char *argv[])
 		printf("Error\n");	
 		return (1);
 	}
+	if (not_number(*argv) == 0){
+		printf("Error\n");
+		return (1);
+	}
 //  CREATING STACK_A - MATCHES INPUT
 	i = argc - 1;
 	stack_a = NULL;
@@ -37,7 +41,7 @@ int	main(int argc, char *argv[])
 	} 
 	stack_a_fp = &stack_a;
 	stack_b_fp = &stack_b;
-	stack_a = rotate_stack(stack_a);
+//	stack_a = rotate_stack(stack_a);
 // CHECK: PRINTING STACK
 	while (stack_a != NULL){
 		printf("STACK A:%d\n", stack_a->value);

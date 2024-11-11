@@ -18,6 +18,8 @@
 # include <stdio.h>
 # include <stdint.h>
 # include <stdlib.h>
+# include <string.h>
+# include <ctype.h> 
 
 typedef struct node{
     int value;
@@ -31,5 +33,7 @@ stack *rotate_stack(stack *stack_a);
 stack *reverse_rotate(stack *stack_a);
 int   push_to_a(stack **stack_a, stack **stack_b);
 int   push_to_b(stack **stack_a, stack **stack_b);
+int	not_number(char *argv);
+int	ft_isalpha(int c);
 
 #endif

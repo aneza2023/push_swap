@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-stack  *swap_in_stack(stack *stack_b)
+stack  *swap_in_stack_b(stack *stack_b)
 {
    stack   *temp;
 
@@ -9,7 +9,7 @@ stack  *swap_in_stack(stack *stack_b)
 // putting values of 2nd in temp
     temp = (stack*)malloc(sizeof(stack));
     if (temp == NULL){
-		printf("Allocation failed");
+		printf("Allocation failed\n");
 		return (stack_b);
 	}
     temp->value = stack_b->next->value;
@@ -24,11 +24,11 @@ stack  *swap_in_stack(stack *stack_b)
 		printf("B: %d\n", stack_b->value);
 		stack_b = stack_b ->next;
 	}   */
-    printf("sb");
+    printf("sb\n");
     return (stack_b);  
 }
 
-stack *rotate_stack(stack *stack_b)
+stack *rotate_stack_b(stack *stack_b)
 {
     stack   *end_node;
     stack   **head;
@@ -39,7 +39,7 @@ stack *rotate_stack(stack *stack_b)
 	head = &stack_b->next;
     end_node = (stack*)malloc(sizeof(stack));
     if (end_node == NULL) {
-        printf("Allocation for rotate stack failed");
+        printf("Allocation for rotate stack failed\n");
         return(stack_b);
     }
     end_node->value = stack_b->value;
@@ -53,11 +53,11 @@ stack *rotate_stack(stack *stack_b)
     stack_b->next = end_node;
 //set to start
     stack_b = *head;
-    printf("rb");
+    printf("rb\n");
     return (stack_b);
 }   
 
-stack *reverse_rotate(stack *stack_b)
+stack *reverse_rotate_b(stack *stack_b)
 {
     stack   **head;
     stack   *first_node;
@@ -68,7 +68,7 @@ stack *reverse_rotate(stack *stack_b)
     head = &stack_b;
     first_node = (stack*)malloc(sizeof(stack));
     if (first_node == NULL) {
-        printf("Allocation for rotate stack failed");
+        printf("Allocation for rotate stack failed\n");
         return(stack_b);
     }
     temp = stack_b;
@@ -79,7 +79,7 @@ stack *reverse_rotate(stack *stack_b)
     temp->next = NULL;
     first_node->next = *head;
     stack_b = first_node;
-    printf("rrb");
+    printf("rrb\n");
     return (stack_b);
 }
 
@@ -91,7 +91,7 @@ int push_to_b(stack **stack_a, stack **stack_b)
         return (0);
     pushed_stack = (stack*)malloc(sizeof(stack));
     if (pushed_stack == NULL) {
-        printf("Allocation for rotate stack failed");
+        printf("Allocation for rotate stack failed\n");
         return(0);
     }
     pushed_stack->value = (*stack_a)->value;
@@ -99,6 +99,6 @@ int push_to_b(stack **stack_a, stack **stack_b)
     *stack_a = (*stack_a)->next;
     pushed_stack->next = *stack_b;
     *stack_b = pushed_stack;
-    printf("pb");
+    printf("pb\n");
     return (1);
 }

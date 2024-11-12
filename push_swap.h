@@ -28,13 +28,17 @@ typedef struct node{
 } stack;
 
 stack *inserting_arg(stack *stack_a, int arg);
-stack *swap_in_stack(stack *stack_a);
-stack *rotate_stack(stack *stack_a);
-stack *reverse_rotate(stack *stack_a);
-int   push_to_a(stack **stack_a, stack **stack_b);
-int   push_to_b(stack **stack_a, stack **stack_b);
-int	not_number(char *argv);
+stack *swap_in_stack_a(stack *stack_a);
+stack *rotate_stack_a(stack *stack_a);
+stack *reverse_rotate_a(stack *stack_a);
+stack *swap_in_stack_b(stack *stack_b);
+stack *rotate_stack_b(stack *stack_b);
+stack *reverse_rotate_b(stack *stack_b);
+int push_to_a(stack **stack_a, stack **stack_b);
+int push_to_b(stack **stack_a, stack **stack_b);
+int not_number(char *argv);
 int	is_alpha(int c);
 int is_sign(int c);
 int	repetition(char *argv, stack *stack_a);
+int	algori(stack **stack_a, stack **stack_b);
 #endif

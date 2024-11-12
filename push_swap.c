@@ -12,6 +12,23 @@
 
 #include "push_swap.h"
 
+int	algori(stack **stack_a, stack **stack_b)
+{
+	int i;
+	stack	*checked_num;
+
+	while ((*stack_a)->next != NULL && i < 20){
+		checked_num->value = (*stack_a)->value;
+		if (checked_num->value <= (*stack_a)->value)
+			(*stack_a) = (*stack_a)->next;
+		(*stack_a) = (*stack_a)->next;
+		i++;
+	}
+	printf("checked%d", checked_num->value);
+
+	return (0);
+}
+
 int	main(int argc, char *argv[])
 {
 	int i;
@@ -54,13 +71,14 @@ int	main(int argc, char *argv[])
 		}
 	stack_a_fp = &stack_a;
 	stack_b_fp = &stack_b;
+	algori(stack_a_fp, stack_b_fp);
 // CHECK: PRINTING STACK
 	while (stack_a != NULL){
-		printf("STACK A:%d\n", stack_a->value);
+		printf("\nSTACK A:%d\n", stack_a->value);
 		stack_a = stack_a ->next;
 	} 
 	while (stack_b != NULL){
-		printf("STACK B:%d\n", stack_b->value);
+		printf("\nSTACK B:%d\n", stack_b->value);
 		stack_b = stack_b ->next;
 	} 
 	return (0);

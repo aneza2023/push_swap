@@ -21,3 +21,25 @@ int	ft_isalpha(int c)
 	}
 	return (0);
 }
+
+int	repetition(char *argv, stack *stack_a)
+{
+	int	i;
+	int arg;
+
+	i = 1;
+	while (stack_a != NULL){
+		arg = atoi(argv);
+		if (stack_a->value == arg){
+			while (stack_a->next != NULL){
+				if(stack_a->next->value == arg)
+					return (1);
+				stack_a = stack_a->next;
+			}
+		}
+		stack_a = stack_a->next;
+	}
+	return (0);
+}
+
+// {}

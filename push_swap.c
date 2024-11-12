@@ -21,7 +21,6 @@ int	main(int argc, char *argv[])
 	stack **stack_a_fp;
 	stack **stack_b_fp;
 	
-	// TO DO: prevent strings as an input - split function maybe, check for repetition
 	if (argc <= 1 || (argc == 2 && !argv[1][0])){
 		printf("Error\n");	
 		return (1);
@@ -44,9 +43,17 @@ int	main(int argc, char *argv[])
 		stack_a = inserting_arg(stack_a, arg);	
 		i--;	
 	} 
+	i = 1;
+	while (argv[i] != NULL){
+		if (repetition(argv[i], stack_a) == 1){
+			printf("Error\n");
+			return (1);
+		}
+		else
+			i++;
+		}
 	stack_a_fp = &stack_a;
 	stack_b_fp = &stack_b;
-//	stack_a = rotate_stack(stack_a);
 // CHECK: PRINTING STACK
 	while (stack_a != NULL){
 		printf("STACK A:%d\n", stack_a->value);

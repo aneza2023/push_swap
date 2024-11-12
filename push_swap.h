@@ -35,5 +35,5 @@ int   push_to_a(stack **stack_a, stack **stack_b);
 int   push_to_b(stack **stack_a, stack **stack_b);
 int	not_number(char *argv);
 int	ft_isalpha(int c);
-int	repetition(char *argv);
+int	repetition(char *argv, stack *stack_a);
 #endif

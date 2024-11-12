@@ -6,19 +6,28 @@ int	not_number(char *argv)
 
 	i = 0;
 	while (argv[i] != '\0'){
-		if (ft_isalpha(argv[i]) == 1)
+		if (is_alpha(argv[i]) == 1)
 			return (1); 
+		else if ((is_sign(argv[i]) == 1) && ((is_alpha(argv[i + 1]) == 1) || (is_sign(argv[i + 1]) == 1))) 
+			return(1);
 		i++;
 	}
 	return (0);
 } 
 
-int	ft_isalpha(int c)
+int	is_alpha(int c)
 {
-	if ((c >= 1 && c <= 44) || (c >= 46 && c <= 47) || (c >= 58 && c <= 127))
+	if ((c >= 1 && c <= 42) || (c == 44) || (c >= 46 && c <= 47) || (c >= 58 && c <= 127))
 	{
 		return (1);
 	}
+	return (0);
+}
+
+int	is_sign(int c)
+{
+	if (c == 45 || c == 43)
+		return (1);
 	return (0);
 }
 

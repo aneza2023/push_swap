@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   creating_stack_a.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
+/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:36:36 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/10 14:01:31 by anezkahavra      ###   ########.fr       */
+/*   Updated: 2024/11/13 17:31:45 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int sorting_for_index(int *arr_arg, int argc)
 				temp = arr_arg[i + 1];
 				arr_arg[i + 1] = arr_arg[i];
 				arr_arg[i] = temp;
+				i++;
 			}
 			i++;
 		}

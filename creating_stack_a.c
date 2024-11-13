@@ -31,30 +31,26 @@ stack *inserting_arg(stack *stack_a, int arg)
 int sorting_for_index(int *arr_arg, int argc)
 {
 	int i;
+	int	j;
+	int	temp;
 
 	i = 1;
-	printf("heheh");
-/* 	while (i < argc){
-		printf("aarr>%d", arr_arg[i]);
+	j = 1;
+	while (j < argc){
+		while (i < argc - j){
+			if (arr_arg[i] >= arr_arg[i + 1]){
+				temp = arr_arg[i + 1];
+				arr_arg[i + 1] = arr_arg[i];
+				arr_arg[i] = temp;
+			}
+			i++;
+		}
+		j++;
+	}
+	i = 1;
+	while (i < argc){
+		printf("array>%d", arr_arg[i]);
 		i++;
-	} */
+	}
 	return (0);
 }
-
-/* 
-void BubbleSort(int a[], int array_size)
-{
-    int i, j, temp;
-    for (i = 0; i < (array_size - 1); ++i)
-    {
-        for (j = 0; j < array_size - 1 - i; ++j )
-        {
-            if (a[j] > a[j+1])
-            {
-                temp = a[j+1];
-                a[j+1] = a[j];
-                a[j] = temp;
-            }
-        }
-    }
-} */

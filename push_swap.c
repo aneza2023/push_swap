@@ -65,19 +65,21 @@ int	main(int argc, char *argv[])
 	i = argc - 1;
 	stack_a = NULL;
 	stack_b = NULL;
+	arr_arg = (int *)malloc(argc *(sizeof(int)));
+	if (arr_arg == NULL)
+		return (1);
 	while (i >= 1 ){
 		arg = atoi(argv[i]);
 		arr_arg[i] = arg;
 		stack_a = inserting_arg(stack_a, arg);	
 		i--;	
 	} 
-//	arr_arg[i] = '\0';
-	i = 1;
+/* 	i = 1;
 	while (i < argc){
 		printf("aarr>%d", arr_arg[i]);
 		i++;
-	}
-//	sorting_for_index (arr_arg, argc);
+	} */
+	sorting_for_index (arr_arg, argc);
 	i = 1;
 	while (argv[i] != NULL){
 		if (repetition(argv[i], stack_a) == 1){

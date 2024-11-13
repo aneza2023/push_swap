@@ -1,5 +1,6 @@
 #include "push_swap.h"
 
+// add check for long int, neg/pos
 int	not_number(char *argv)
 {
 	int	i;

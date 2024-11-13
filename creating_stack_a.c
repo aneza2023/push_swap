@@ -22,8 +22,28 @@ stack *inserting_arg(stack *stack_a, int arg)
 		printf("Allocation failed");
 		return (stack_a);
 	}
-//	stack_a->prev = new_node;
 	new_node->value = arg;
 	new_node->next = stack_a;
 	return (new_node);
+}
+
+//add index for easier sorting
+void sorting_for_index(int argc, char *argv)
+
+
+void BubbleSort(int a[], int array_size)
+{
+    int i, j, temp;
+    for (i = 0; i < (array_size - 1); ++i)
+    {
+        for (j = 0; j < array_size - 1 - i; ++j )
+        {
+            if (a[j] > a[j+1])
+            {
+                temp = a[j+1];
+                a[j+1] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
 }

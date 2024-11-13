@@ -24,7 +24,7 @@
 typedef struct node{
     int value;
     struct node *next;
-//    struct node *prev;
+    int index;
 } stack;
 
 stack *inserting_arg(stack *stack_a, int arg);

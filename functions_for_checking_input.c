@@ -9,12 +9,16 @@ int	not_number(char *argv)
 	while (argv[i] != '\0'){
 		if (is_alpha(argv[i]) == 1)
 			return (1); 
-		else if ((is_sign(argv[i]) == 1) && ((is_alpha(argv[i + 1]) == 1) || (is_sign(argv[i + 1]) == 1))) 
-			return(1);
-		i++;
+/* 		else if ((is_sign(argv[i]) == 1) && ((is_alpha(argv[i + 1]) == 1) || (is_sign(argv[i + 1]) == 1))) 
+			return(1); */
+		else if ((is_sign(argv[i]) == 1) && (i != 0))
+			return (1);
+		else
+			i++;
 	}
 	return (0);
 } 
+
 
 int	is_alpha(int c)
 {
@@ -53,3 +57,4 @@ int	repetition(char *argv, stack *stack_a)
 }
 
 // {}
+// ((is_alpha(argv[i - 1]) == 1) || (is_alpha(argv[i - 1]) == 1))

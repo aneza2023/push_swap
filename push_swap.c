@@ -42,6 +42,7 @@ int	main(int argc, char *argv[])
 {
 	int i;
 	int arg;
+	int *arr_arg;
 	stack *stack_a;
 	stack *stack_b;
 	stack **stack_a_fp;
@@ -66,9 +67,17 @@ int	main(int argc, char *argv[])
 	stack_b = NULL;
 	while (i >= 1 ){
 		arg = atoi(argv[i]);
+		arr_arg[i] = arg;
 		stack_a = inserting_arg(stack_a, arg);	
 		i--;	
 	} 
+//	arr_arg[i] = '\0';
+	i = 1;
+	while (i < argc){
+		printf("aarr>%d", arr_arg[i]);
+		i++;
+	}
+//	sorting_for_index (arr_arg, argc);
 	i = 1;
 	while (argv[i] != NULL){
 		if (repetition(argv[i], stack_a) == 1){

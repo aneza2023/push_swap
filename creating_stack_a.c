@@ -28,9 +28,20 @@ stack *inserting_arg(stack *stack_a, int arg)
 }
 
 //add index for easier sorting
-/* void sorting_for_index(int argc, char *argv)
+int sorting_for_index(int *arr_arg, int argc)
+{
+	int i;
 
+	i = 1;
+	printf("heheh");
+/* 	while (i < argc){
+		printf("aarr>%d", arr_arg[i]);
+		i++;
+	} */
+	return (0);
+}
 
+/* 
 void BubbleSort(int a[], int array_size)
 {
     int i, j, temp;

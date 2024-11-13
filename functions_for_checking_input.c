@@ -57,4 +57,3 @@ int	repetition(char *argv, stack *stack_a)
 }
 
 // {}
-// ((is_alpha(argv[i - 1]) == 1) || (is_alpha(argv[i - 1]) == 1))

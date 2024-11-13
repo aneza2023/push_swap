@@ -41,4 +41,5 @@ int	is_alpha(int c);
 int is_sign(int c);
 int	repetition(char *argv, stack *stack_a);
 int	algori(stack **stack_a, stack **stack_b);
+int sorting_for_index(int *arr_arg, int argc);
 #endif

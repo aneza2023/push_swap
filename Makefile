@@ -4,6 +4,7 @@ SOURCES =	push_swap.c\
 			operations_for_stack_a.c\
 			operations_for_stack_b.c\
 			functions_for_checking_input.c\
+			algorithm_under_100.c\
 
 OBJS = $(SOURCES:.c=.o)
 CC = cc

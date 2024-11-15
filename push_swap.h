@@ -6,7 +6,7 @@
 /*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/15 13:29:08 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:27:58 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,12 @@
 # include <string.h>
 # include <ctype.h>
 
-typedef struct node{
-	int		value;
-	struct	node *next;
-	int		index;
+typedef struct node
+{
+	int			value;
+	struct node	*next;
+	int			index;
+	struct node *prev;
 }	stack;
 
 stack	*inserting_arg(stack *stack_a, int arg);
@@ -40,8 +42,9 @@ int		not_number(char *argv);
 int		is_alpha(int c);
 int		is_sign(int c);
 int		repetition(char *argv, stack *stack_a);
-int		algori(stack **stack_a, stack **stack_b);
+int		algori_under100(stack **stack_a, stack **stack_b, int argc);
 int		*sorting_for_index(int *arr_arg, int argc);
 int		add_index(int *arr_arg, stack **stack_a, int argc);
+int		numbering(int argc);
 
 #endif

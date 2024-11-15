@@ -6,37 +6,11 @@
 /*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:20:10 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/15 15:30:44 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:50:37 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/* int	algori(stack **stack_a, stack **stack_b)
-{
-	int i;
-	stack	*checked_num;
-	stack	*temp;
-
-	checked_num = (stack *)malloc(sizeof(stack));
-	if (checked_num == NULL)
-		return (1);
-	temp = (stack *)malloc(sizeof(stack));
-	if (temp == NULL)
-		return (1);
-	temp = stack_a;
-	while (temp != NULL && i < 20){
-		checked_num->value = (*stack_a)->value;
-		if (checked_num->value <= temp->value || temp.next )
-			temp = temp->next;
-		else
-		(*stack_a) = (*stack_a)->next;
-		i++;
-	}
-	printf("checked%d", checked_num->value);
-
-	return (0);
-} */
 
 int	main(int argc, char *argv[])
 {
@@ -88,7 +62,9 @@ int	main(int argc, char *argv[])
 	}
 	stack_a_fp = &stack_a;
 	stack_b_fp = &stack_b;
+	stack_a = reverse_rotate_a(stack_a);
 	add_index(arr_arg, stack_a_fp, argc);
+//	algori_under100(stack_a_fp, stack_b_fp, argc);
 // CHECK: PRINTING STACK
 	while (stack_a != NULL)
 	{
@@ -102,4 +78,3 @@ int	main(int argc, char *argv[])
 	}
 	return (0);
 }
-// {}

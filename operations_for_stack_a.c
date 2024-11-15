@@ -6,7 +6,7 @@
 /*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:27 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/15 14:45:16 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:49:59 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ stack	*swap_in_stack_a(stack *stack_a)
 		return (stack_a);
 	}
 	temp->value = stack_a->next->value;
+	temp->prev = stack_a->next->prev;
 	stack_a->next = stack_a->next->next;
 	temp->next = stack_a;
 	stack_a = temp;
@@ -66,6 +67,7 @@ stack	*rotate_stack_a(stack *stack_a)
 		i++;
 	}
 	stack_a->next = end_node;
+	end_node->prev = stack_a;
 	stack_a = *head;
 	printf("ra\n");
 	return (stack_a);

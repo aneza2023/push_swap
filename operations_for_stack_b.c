@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   operations_for_stack_b.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/15 13:11:17 by ahavrank          #+#    #+#             */
+/*   Updated: 2024/11/15 13:11:19 by ahavrank         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 stack  *swap_in_stack_b(stack *stack_b)
@@ -19,13 +31,13 @@ stack  *swap_in_stack_b(stack *stack_b)
 // setting temp as 1st
     temp->next = stack_b;
 //    stack_b->prev = temp;
-    stack_b = temp; 
+    stack_b = temp;
 /*     while (stack_b != NULL){
 		printf("B: %d\n", stack_b->value);
 		stack_b = stack_b ->next;
 	}   */
     printf("sb\n");
-    return (stack_b);  
+    return (stack_b);
 }
 
 stack *rotate_stack_b(stack *stack_b)
@@ -55,7 +67,7 @@ stack *rotate_stack_b(stack *stack_b)
     stack_b = *head;
     printf("rb\n");
     return (stack_b);
-}   
+}
 
 stack *reverse_rotate_b(stack *stack_b)
 {

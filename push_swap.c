@@ -6,7 +6,7 @@
 /*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:20:10 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/15 13:48:06 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:30:44 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int	main(int argc, char *argv[])
 	}
 	stack_a_fp = &stack_a;
 	stack_b_fp = &stack_b;
-//	add_index(arr_arg, stack_a_fp, argc);
+	add_index(arr_arg, stack_a_fp, argc);
 // CHECK: PRINTING STACK
 	while (stack_a != NULL)
 	{

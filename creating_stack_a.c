@@ -6,7 +6,7 @@
 /*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:36:36 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/15 14:29:43 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/15 15:37:11 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,14 +59,11 @@ int	add_index(int *arr_arg, stack **stack_a, int argc)
 	int		i;
 	stack	*temp;
 
-	temp = (stack *)malloc(sizeof(stack));
-	if (temp == NULL)
-		return (1);
 	temp = *stack_a;
 	while (temp != NULL)
 	{
 		i = 1;
-		while (i < argc - 1)
+		while (i < argc)
 		{
 			if ((temp)->value == arr_arg[i])
 				(temp)->index = i;
@@ -74,9 +71,10 @@ int	add_index(int *arr_arg, stack **stack_a, int argc)
 		}
 		(temp) = (temp)->next;
 	}
+	temp = *stack_a;
 	while (*stack_a != NULL)
 	{
-		printf("INDEX>%d", (*stack_a)->index);
+		printf("INDEX>  %d\n", (*stack_a)->index);
 		*stack_a = (*stack_a)->next;
 	}
 	return (0);

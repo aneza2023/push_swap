@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:27 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/18 10:43:08 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/18 14:26:32 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ stack	*swap_in_stack_a(stack *stack_a)
 		return (stack_a);
 	}
 	temp->value = stack_a->next->value;
+	temp->index = stack_a->next->index;
 	temp->prev = NULL;
 	if (stack_a->next->next != NULL)
 		stack_a->next = stack_a->next->next;
@@ -61,6 +62,7 @@ stack	*rotate_stack_a(stack *stack_a)
 		return (stack_a);
 	}
 	end_node->value = stack_a->value;
+	end_node->index = stack_a->index;
 	end_node->next = NULL;
 	i = 1;
 	while (stack_a->next != NULL)
@@ -97,6 +99,7 @@ stack	*reverse_rotate_a(stack *stack_a)
 		temp = temp->next;
 	}
 	first_node->value = temp->next->value;
+	first_node->index = temp->next->index;
 	temp->next->prev = NULL;
 	temp->next = NULL;
 	first_node->next = *head;
@@ -119,6 +122,7 @@ int	push_to_a(stack **stack_a, stack **stack_b)
 		return (0);
 	}
 	pushed_stack->value = (*stack_b)->value;
+	pushed_stack->index = (*stack_b)->index;
 	if ((*stack_b)->next != NULL)
 		(*stack_b)->next->prev = NULL;
 	*stack_b = (*stack_b)->next;

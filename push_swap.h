@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/18 11:09:53 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/18 12:42:52 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int		numbering(int argc);
 int 	printing_stacks(stack *stack_a);
 int 	algorithm(stack *stack_a, int argc);
 int 	algori_for_2(stack *stack_a);
-int		algori_for_3(stack *stack_a);
+stack	*algori_for_3(stack *stack_a);
+int		algori_under_5(stack *stack_a, stack *stack_b, int argc);
 
 #endif

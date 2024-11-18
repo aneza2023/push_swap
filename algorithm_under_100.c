@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 15:58:56 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/18 12:21:07 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/18 14:23:17 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int algori_for_2(stack *stack_a)
 	return(0);
 }	
 
-int	algori_for_3(stack *stack_a)
+stack	*algori_for_3(stack *stack_a)
 {
 	if ((stack_a->value >= stack_a->next->value) && (stack_a->next->value <= stack_a->next->next->value)){
 		if (stack_a->value <= stack_a->next->next->value)
@@ -75,10 +75,35 @@ int	algori_for_3(stack *stack_a)
 			stack_a = rotate_stack_a(stack_a);
 		}
 	}
+//	printing_stacks(stack_a);
+	return (stack_a);
+}
+
+int	algori_under_5(stack *stack_a, stack *stack_b, int argc)
+{
+	stack	**stack_a_fp;
+	stack	**stack_b_fp;
+
+	stack_a_fp = &stack_a;
+	stack_b_fp = &stack_b;
+	push_to_b(stack_a_fp, stack_b_fp);
+	if (argc > 5)
+		push_to_b(stack_a_fp, stack_b_fp);
+	stack_a = algori_for_3(stack_a);
+	while (stack_b != NULL){
+		if (stack_b->value >= stack_a->value && stack_b->value <= stack_a->next->value){
+		push_to_a(stack_a_fp, stack_b_fp);
+		stack_a = swap_in_stack_a(stack_a);
+		}
+		else	
+			stack_a = rotate_stack_a(stack_a);
+	}
+	while (stack_a->index != 1){
+		reverse_rotate_a(stack_a);
+	}
 	printing_stacks(stack_a);
 	return (0);
 }
-
 
 
 

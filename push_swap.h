@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/15 17:27:58 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/18 10:00:25 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ int		algori_under100(stack **stack_a, stack **stack_b, int argc);
 int		*sorting_for_index(int *arr_arg, int argc);
 int		add_index(int *arr_arg, stack **stack_a, int argc);
 int		numbering(int argc);
+int 	printing_stacks(stack *stack_a, stack *stack_b);
 
 #endif

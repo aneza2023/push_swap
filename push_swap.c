@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:20:10 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/18 10:13:19 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/18 10:46:10 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,6 @@ int	main(int argc, char *argv[])
 	}
 	stack_a_fp = &stack_a;
 	add_index(arr_arg, stack_a_fp, argc);
+	algorithm(stack_a, argc);
 	return (0);
 }

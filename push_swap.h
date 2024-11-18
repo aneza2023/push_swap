@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/18 10:00:25 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/18 11:09:53 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,9 @@ int		algori_under100(stack **stack_a, stack **stack_b, int argc);
 int		*sorting_for_index(int *arr_arg, int argc);
 int		add_index(int *arr_arg, stack **stack_a, int argc);
 int		numbering(int argc);
-int 	printing_stacks(stack *stack_a, stack *stack_b);
+int 	printing_stacks(stack *stack_a);
+int 	algorithm(stack *stack_a, int argc);
+int 	algori_for_2(stack *stack_a);
+int		algori_for_3(stack *stack_a);
 
 #endif

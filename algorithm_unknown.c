@@ -1,15 +1,10 @@
 #include "push_swap.h"
 
-int algorithm(stack **stack_a, stack **stack_b, int argc)
+int algorithm(stack *stack_a, int argc)
 {
-    stack   ***stack_a_fp;
-    stack   ***stack_b_fp;
-
-    stack_a_fp = &stack_a;
-    stack_b_fp = &stack_b;
-    if (argc <= 2)
-        algori_2(stack_a_fp, stack_b_fp);
-    else if (argc < 5 && argc < 100)
-        algori_under100()
+    if (argc == 3)
+        algori_for_2(stack_a);
+    if (argc == 4)
+        algori_for_3(stack_a);
     return (0);
 }

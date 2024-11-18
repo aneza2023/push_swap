@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operations_for_stack_b.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:17 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/15 13:11:19 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/18 10:49:59 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,18 @@ stack  *swap_in_stack_b(stack *stack_b)
 
     if (stack_b->next == NULL)
         return (stack_b);
-// putting values of 2nd in temp
     temp = (stack*)malloc(sizeof(stack));
     if (temp == NULL){
 		printf("Allocation failed\n");
 		return (stack_b);
 	}
     temp->value = stack_b->next->value;
-// deleting 2nds
-//    stack_b->next->next->prev = stack_b;
-    stack_b->next = stack_b->next->next;
-// setting temp as 1st
+    temp->prev = NULL;
+    if (stack_b->next->next != NULL)
+        stack_b->next = stack_b->next->next;
+    stack_b->prev = temp;
     temp->next = stack_b;
-//    stack_b->prev = temp;
     stack_b = temp;
-/*     while (stack_b != NULL){
-		printf("B: %d\n", stack_b->value);
-		stack_b = stack_b ->next;
-	}   */
     printf("sb\n");
     return (stack_b);
 }

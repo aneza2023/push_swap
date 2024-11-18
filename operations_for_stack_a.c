@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operations_for_stack_a.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:27 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/15 17:49:59 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/18 10:43:08 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,10 @@ stack	*swap_in_stack_a(stack *stack_a)
 		return (stack_a);
 	}
 	temp->value = stack_a->next->value;
-	temp->prev = stack_a->next->prev;
-	stack_a->next = stack_a->next->next;
+	temp->prev = NULL;
+	if (stack_a->next->next != NULL)
+		stack_a->next = stack_a->next->next;
+	stack_a->prev = temp;
 	temp->next = stack_a;
 	stack_a = temp;
 	printf("sa\n");

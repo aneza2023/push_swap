@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 15:58:56 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/18 14:40:30 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/18 14:46:53 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,8 @@ int	algori_under_5(stack *stack_a, stack *stack_b, int argc)
 	if (argc > 5)
 		push_to_b(stack_a_fp, stack_b_fp);
 	stack_a = algori_for_3(stack_a);
-	if (stack_b->value > stack_b->next->value)
-		swap_in_stack_b(stack_b);
+	if (stack_b->next != NULL && stack_b->value > stack_b->next->value)
+		swap_in_stack_b(stack_b);	
 	while (stack_b != NULL){
 		if (stack_b->value >= stack_a->value && stack_b->value <= stack_a->next->value){
 		push_to_a(stack_a_fp, stack_b_fp);

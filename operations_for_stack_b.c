@@ -99,7 +99,7 @@ int push_to_b(stack **stack_a, stack **stack_b)
 {
     stack   *pushed_stack;
 
-    if (stack_a == NULL)
+    if (*stack_a == NULL)
         return (0);
     pushed_stack = (stack*)malloc(sizeof(stack));
     if (pushed_stack == NULL) {
@@ -107,9 +107,12 @@ int push_to_b(stack **stack_a, stack **stack_b)
         return(0);
     }
     pushed_stack->value = (*stack_a)->value;
-//    (*stack_a)->value = NULL;
+    if ((*stack_a)->next != NULL)
+        (*stack_a)->next->prev = NULL;
     *stack_a = (*stack_a)->next;
     pushed_stack->next = *stack_b;
+    if (*stack_b != NULL)
+        (*stack_a)->prev = pushed_stack;
     *stack_b = pushed_stack;
     printf("pb\n");
     return (1);

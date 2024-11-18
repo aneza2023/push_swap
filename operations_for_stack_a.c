@@ -95,8 +95,10 @@ stack	*reverse_rotate_a(stack *stack_a)
 		temp = temp->next;
 	}
 	first_node->value = temp->next->value;
+	temp->next->prev = NULL;
 	temp->next = NULL;
 	first_node->next = *head;
+	(*head)->prev = first_node;
 	stack_a = first_node;
 	printf("rra\n");
 	return (stack_a);
@@ -106,7 +108,7 @@ int	push_to_a(stack **stack_a, stack **stack_b)
 {
 	stack	*pushed_stack;
 
-	if (stack_b == NULL)
+	if (*stack_b == NULL)
 		return (0);
 	pushed_stack = (stack *)malloc(sizeof(stack));
 	if (pushed_stack == NULL)
@@ -115,8 +117,12 @@ int	push_to_a(stack **stack_a, stack **stack_b)
 		return (0);
 	}
 	pushed_stack->value = (*stack_b)->value;
+	if ((*stack_b)->next != NULL)
+		(*stack_b)->next->prev = NULL;
 	*stack_b = (*stack_b)->next;
 	pushed_stack->next = *stack_a;
+	if (*stack_a != NULL)
+		(*stack_a)->prev = pushed_stack;
 	*stack_a = pushed_stack;
 	printf("pa\n");
 	return (1);

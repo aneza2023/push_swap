@@ -62,7 +62,8 @@ int	main(int argc, char *argv[])
 	}
 	stack_a_fp = &stack_a;
 	stack_b_fp = &stack_b;
-	stack_a = reverse_rotate_a(stack_a);
+//	push_to_b(stack_a_fp, stack_b_fp);
+	push_to_a(stack_a_fp, stack_b_fp);
 	add_index(arr_arg, stack_a_fp, argc);
 //	algori_under100(stack_a_fp, stack_b_fp, argc);
 // CHECK: PRINTING STACK

@@ -11,5 +11,7 @@ int algorithm(stack *stack_a, int argc)
         algori_for_3(stack_a);
     else if (argc > 4 && argc <= 6)
         algori_under_5(stack_a, stack_b, argc);
+    else if (argc > 6 && argc <= 100)
+        algori_under100(stack_a, stack_b, argc);
     return (0);
 }

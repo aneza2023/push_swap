@@ -1,51 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algorithm_under_100.c                              :+:      :+:    :+:   */
+/*   algorithm_under5.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 15:58:56 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/19 08:19:03 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/19 09:09:36 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	algori_under100(stack **stack_a, stack **stack_b, int argc)
-{
-	int		i;
-	stack	*checked_num;
-	stack	*temp;
-	stack	*tempback;
-	stack	*tempfront;
-
-	tempfront = *stack_a;
-	temp = *stack_a;
-	argc = argc / 5;
-	i = 0;
-	while (tempfront != NULL)
-	{
-		if (tempfront->index <= argc)
-			break ;
-		tempfront = tempfront->next;
-	}
-//	printf("1st from top: %d", tempfront->value);
-	while (temp->next != NULL)
-	{
-		temp = temp->next;
-	}
-	tempback = temp;
-//	printf("tempstartback: %d", tempback->value);
-	while (tempback != NULL)
-	{
-		if (tempback->index <= argc)
-			break ;
-		tempback = tempback->prev;
-	}
-//	printf("1st from back: %d", tempback->value);
-	return (0);
-}
 
 int algori_for_2(stack *stack_a)
 {

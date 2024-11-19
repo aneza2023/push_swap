@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 15:58:56 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/18 14:52:00 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/19 08:19:03 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,11 +95,14 @@ int	algori_under_5(stack *stack_a, stack *stack_b, int argc)
 	while (stack_b != NULL){
 		if (stack_b->value >= stack_a->value && stack_b->value <= stack_a->next->value){
 		push_to_a(stack_a_fp, stack_b_fp);
-		stack_a = swap_in_stack_a(stack_a);
+	 	stack_a = swap_in_stack_a(stack_a);
 		}
 		else if (stack_b->index >= 4 && stack_b->index >= stack_a->index){
 			push_to_a(stack_a_fp, stack_b_fp);
-			stack_a = rotate_stack_a(stack_a);
+			stack_a = rotate_stack_a(stack_a);	
+		}
+		else if (stack_b->index <= 2){
+			push_to_a(stack_a_fp, stack_b_fp);
 		}
 		else	
 			stack_a = rotate_stack_a(stack_a);
@@ -107,20 +110,6 @@ int	algori_under_5(stack *stack_a, stack *stack_b, int argc)
 	while (stack_a->index != 1){
 		stack_a = reverse_rotate_a(stack_a);
 	}
-	printing_stacks(stack_a);
+//	printing_stacks(stack_a);
 	return (0);	
 }
-
-
-
-
-
-/* int	numbering(int argc)
-{
-	int	i;
-
-	i = argc / 5;
-	printf("divide>   %d", i);
-		printf("divide>   %d", argc);
-	return (0);
-} */

@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:09:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/20 12:49:19 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/20 13:11:53 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ int	algori_under100(stack *stack_a, stack *stack_b, int argc)
 	
 	while (stack_a != NULL){
 		stack_a = cheapest_numer(stack_a, argc);
-		stack_a_fp = &stack_a;
+ 		stack_a_fp = &stack_a;
 		stack_b = checking_stack_b(stack_b);
 		stack_b_fp = &stack_b;
-		push_to_b(stack_a_fp, stack_b_fp);
+		push_to_b(stack_a_fp, stack_b_fp); 
+		argc--;
 	}
 	printing_stacks(stack_a);
 	return (0);
@@ -68,7 +69,7 @@ int	first_index(stack *stack_a, int argc)
 		tempfront = tempfront->next;
 		i++;
 	}
-// printf("1st from top: %d, position> %d", tempfront->value, i);
+ printf("1st from top: %d, position> %d\n", tempfront->value, i);
 	return (i);
 }
 
@@ -91,7 +92,7 @@ int	second_index(stack *stack_a, int argc)
 		tempback = tempback->prev;
 		i++;
 	}
-//	printf("1st from back: %d, position> %d", tempback->value, i);
+	printf("1st from back: %d, position> %d\n", tempback->value, i);
 	return (i);
 }
 

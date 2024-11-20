@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:09:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/19 14:26:41 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/20 12:17:28 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,17 @@ int	cheapest_numer(stack *stack_a, int argc)
 	half = argc / 2;
 	first_ind = first_index(stack_a, argc);
 	sec_ind = second_index(stack_a, argc);
-	if ((half - first_ind) > (half - sec_ind)){
-		while (first_ind >= 0)
-		rotate_stack_a(stack_a);
-		first_ind--;	
+	if (((half - first_ind) > (half - sec_ind)) || ((half - first_ind) == (half - sec_ind))){
+		while (first_ind >= 2){
+		stack_a = rotate_stack_a(stack_a);
+		first_ind--;
+		}	
+	}
+	else{
+		while (sec_ind >= 1){
+			stack_a = reverse_rotate_a(stack_a);
+			sec_ind--;
+		}
 	}
 	printing_stacks(stack_a);
 	return (0);

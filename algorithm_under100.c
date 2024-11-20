@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:09:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/20 12:17:28 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/20 12:49:19 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,21 @@
 
 int	algori_under100(stack *stack_a, stack *stack_b, int argc)
 {
-	cheapest_numer(stack_a, argc);
+	stack	**stack_a_fp;
+	stack	**stack_b_fp;
+	
+	while (stack_a != NULL){
+		stack_a = cheapest_numer(stack_a, argc);
+		stack_a_fp = &stack_a;
+		stack_b = checking_stack_b(stack_b);
+		stack_b_fp = &stack_b;
+		push_to_b(stack_a_fp, stack_b_fp);
+	}
+	printing_stacks(stack_a);
 	return (0);
 }
 
-int	cheapest_numer(stack *stack_a, int argc)
+stack	*cheapest_numer(stack *stack_a, int argc)
 {
 	int	half;
 	int	first_ind;
@@ -39,8 +49,8 @@ int	cheapest_numer(stack *stack_a, int argc)
 			sec_ind--;
 		}
 	}
-	printing_stacks(stack_a);
-	return (0);
+//	printing_stacks(stack_a);
+	return (stack_a);
 }
 
 int	first_index(stack *stack_a, int argc)
@@ -58,7 +68,7 @@ int	first_index(stack *stack_a, int argc)
 		tempfront = tempfront->next;
 		i++;
 	}
- printf("1st from top: %d, position> %d", tempfront->value, i);
+// printf("1st from top: %d, position> %d", tempfront->value, i);
 	return (i);
 }
 
@@ -81,6 +91,16 @@ int	second_index(stack *stack_a, int argc)
 		tempback = tempback->prev;
 		i++;
 	}
-	printf("1st from back: %d, position> %d", tempback->value, i);
+//	printf("1st from back: %d, position> %d", tempback->value, i);
 	return (i);
+}
+
+stack	*checking_stack_b(stack *stack_b)
+{
+	if (stack_b == NULL)
+		return (stack_b);
+	while (stack_b->index >= stack_b->next->index){
+		stack_b = rotate_stack_b(stack_b);
+	}
+	return (stack_b);
 }

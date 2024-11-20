@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/19 14:20:11 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/20 12:44:21 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,9 @@ int 	algorithm(stack *stack_a, int argc);
 int 	algori_for_2(stack *stack_a);
 stack	*algori_for_3(stack *stack_a);
 int		algori_under_5(stack *stack_a, stack *stack_b, int argc);
-int		cheapest_numer(stack *stack_a, int argc);
+stack		*cheapest_numer(stack *stack_a, int argc);
 int		first_index(stack *stack_a, int argc);
 int		second_index(stack *stack_a, int argc);
+stack	*checking_stack_b(stack *stack_b);
 
 #endif

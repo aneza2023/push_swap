@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 15:58:56 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/19 09:09:36 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/20 14:18:13 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int algori_for_2(stack *stack_a)
 	if (stack_a->value > stack_a->next->value)
 		swap_in_stack_a(stack_a);
 //	printing_stacks(stack_a);
-	return(0);
+	return(0);git
 }	
 
 stack	*algori_for_3(stack *stack_a)

@@ -6,7 +6,7 @@
 /*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:36:36 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/15 17:42:38 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/21 15:29:29 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ stack	*inserting_arg(stack *stack_a, int arg)
 	if (stack_a != NULL)
 		stack_a->prev = new_node;
 	new_node->prev = NULL;
-	new_node->value = arg;
-	new_node->next = stack_a;
+	new_node->val = arg;
+	new_node->nx = stack_a;
 	return (new_node);
 }
 
@@ -68,17 +68,12 @@ int	add_index(int *arr_arg, stack **stack_a, int argc)
 		i = 1;
 		while (i < argc)
 		{
-			if ((temp)->value == arr_arg[i])
+			if ((temp)->val == arr_arg[i])
 				(temp)->index = i;
 			i++;
 		}
-		(temp) = (temp)->next;
+		(temp) = (temp)->nx;
 	}
 	temp = *stack_a;
-/* 	while (*stack_a != NULL)
-	{
-		printf("INDEX>  %d\n", (*stack_a)->index);
-		*stack_a = (*stack_a)->next;
-	} */
 	return (0);
 }

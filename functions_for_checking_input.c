@@ -6,7 +6,7 @@
 /*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:08:31 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/15 13:49:05 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/21 15:29:14 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,16 +56,16 @@ int	repetition(char *argv, stack *stack_a)
 	while (stack_a != NULL)
 	{
 		arg = atoi(argv);
-		if (stack_a->value == arg)
+		if (stack_a->val == arg)
 		{
-			while (stack_a->next != NULL)
+			while (stack_a->nx != NULL)
 			{
-				if (stack_a->next->value == arg)
+				if (stack_a->nx->val == arg)
 					return (1);
-				stack_a = stack_a->next;
+				stack_a = stack_a->nx;
 			}
 		}
-		stack_a = stack_a->next;
+		stack_a = stack_a->nx;
 	}
 	return (0);
 }

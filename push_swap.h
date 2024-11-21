@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/20 13:00:09 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/21 15:27:22 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 
 typedef struct node
 {
-	int			value;
-	struct node	*next;
+	int			val;
+	struct node	*nx;
 	int			index;
 	struct node *prev;
 }	stack;
@@ -46,14 +46,15 @@ int		algori_under100(stack *stack_a, stack *stack_b, int argc);
 int		*sorting_for_index(int *arr_arg, int argc);
 int		add_index(int *arr_arg, stack **stack_a, int argc);
 int		numbering(int argc);
-int 	printing_stacks(stack *stack_a);
-int 	algorithm(stack *stack_a, int argc);
-int 	algori_for_2(stack *stack_a);
+int		printing_stacks(stack *stack_a);
+int		algorithm(stack *stack_a, int argc);
+int		algori_for_2(stack *stack_a);
 stack	*algori_for_3(stack *stack_a);
 int		algori_under_5(stack *stack_a, stack *stack_b, int argc);
-stack	*cheapest_numer(stack *stack_a, int argc);
+stack	*cheapest_numer(stack *stack_a, int chunk, int argc);
 int		first_index(stack *stack_a, int argc);
 int		second_index(stack *stack_a, int argc);
 stack	*checking_stack_b(stack *stack_b);
+stack	*allocation(stack *new_node);
 
 #endif

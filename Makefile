@@ -4,7 +4,11 @@ SOURCES =	push_swap.c\
 			operations_for_stack_a.c\
 			operations_for_stack_b.c\
 			functions_for_checking_input.c\
-			algorithm_under_100.c\
+			algorithm_under100.c\
+			printing_stack.c\
+			allocating_for_new_node.c\
+			algorithm_under5.c\
+			algorithm_unknown.c\
 
 OBJS = $(SOURCES:.c=.o)
 CC = cc

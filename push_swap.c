@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:20:10 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/18 10:46:10 by codespace        ###   ########.fr       */
+/*   Updated: 2024/11/21 15:27:30 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,16 @@ int	main(int argc, char *argv[])
 	stack	*stack_a;
 	stack	**stack_a_fp;
 
-	if(argc <= 1 || (argc == 2 && !argv[1][0])){
+	if (argc <= 1 || (argc == 2 && !argv[1][0]))
+	{
 		printf("Error\n");
 		return (1);
 	}
 	i = 1;
-	while (argv[i] != NULL){
-		if (not_number(argv[i]) == 1){
+	while (argv[i] != NULL)
+	{
+		if (not_number(argv[i]) == 1)
+		{
 			printf("Error\n");
 			return (1);
 		}
@@ -48,7 +51,8 @@ int	main(int argc, char *argv[])
 	i = 1;
 	while (argv[i] != NULL)
 	{
-		if (repetition(argv[i], stack_a) == 1){
+		if (repetition(argv[i], stack_a) == 1)
+		{
 			printf("Error\n");
 			return (1);
 		}
@@ -56,6 +60,8 @@ int	main(int argc, char *argv[])
 	}
 	stack_a_fp = &stack_a;
 	add_index(arr_arg, stack_a_fp, argc);
-	algorithm(stack_a, argc);
+//	algorithm(stack_a, argc);
+	stack_a = rotate_stack_b(stack_a);
+	printing_stacks(stack_a);
 	return (0);
 }

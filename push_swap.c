@@ -6,7 +6,7 @@
 /*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:20:10 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/21 15:27:30 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/21 16:36:42 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,7 @@ int	main(int argc, char *argv[])
 	}
 	stack_a_fp = &stack_a;
 	add_index(arr_arg, stack_a_fp, argc);
-//	algorithm(stack_a, argc);
-	stack_a = rotate_stack_b(stack_a);
-	printing_stacks(stack_a);
+	algorithm(stack_a, argc);
+//	printing_stacks(stack_a);
 	return (0);
 }

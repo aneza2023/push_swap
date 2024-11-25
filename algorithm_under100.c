@@ -6,7 +6,7 @@
 /*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:09:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/21 17:06:30 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/25 16:57:54 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ stack	*cheapest_numer(stack *stack_a, int chunk, int argc)
 			sec--;
 		}
 	}
-//	printing_stacks(stack_a);
+	printing_stacks(stack_a);
 	return (stack_a);
 }
 
@@ -69,22 +69,20 @@ int	first_index(stack *stack_a, int ch, int argc)
 
 	tempfront = stack_a;
 	i = 1;
-	printf("ch siz: %d\n", ch);
+	printf("ch siz: %d\n argc siz:%d\n", ch, argc);
 	while (tempfront != NULL && i < argc)
 	{
-		if (k == ch || k == 2 * ch || k == 3 * ch || k == 4 * ch || k == 5 * ch)
-			ch += ch;
-		printf("ch siz num.: %d\n", ch);
 		if (tempfront->index <= ch)
 			break ;
 		tempfront = tempfront->nx;
 		i++;
 	}
-	k++;
 	if (tempfront == NULL && i != 1)
 		tempfront = stack_a;
 	if (tempfront != NULL && i == argc)
 		i = 1;
+	if (argc == (argc - ch))
+		ch += ch;
 	printf("1st from top: %d, position> %d\n", tempfront->val, i);
 	printf("velikost K: %d\n", k);
 	return (i);
@@ -93,6 +91,7 @@ int	first_index(stack *stack_a, int ch, int argc)
 int	second_index(stack *stack_a, int ch, int argc)
 {
 	int		i;
+	int		k;
 	stack	*tempback;
 	stack	*temp;
 
@@ -105,18 +104,18 @@ int	second_index(stack *stack_a, int ch, int argc)
 	i = 1;
 	while (tempback != NULL)
 	{
-		if (tempback->index <= chunk)
+		if (tempback->index <= ch)
 			break ;
 		tempback = tempback->prev;
 		i++;
 	}
+	k++;
 	if (tempback == NULL && i != 1)
-	{
 		tempback = stack_a;
-		chunk += 2;
-	}
 	if (tempback != NULL && i == argc)
 		i = 1;
+	if (k == ch || k == 2 * ch || k == 3 * ch || k == 4 * ch || k == 5 * ch)
+		ch += ch;
 	printf("1st from back: %d, position> %d\n", tempback->val, i);
 	return (i);
 }

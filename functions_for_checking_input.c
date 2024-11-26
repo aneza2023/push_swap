@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-// add check for long int, neg/pos
+// add check for long int, neg/pos, vyzkouset pomlcku zvlast
 int	not_number(char *argv)
 {
 	int	i;

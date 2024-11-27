@@ -69,7 +69,7 @@ int	first_index(stack *stack_a, int ch, int argc)
 
 	tempfront = stack_a;
 	i = 1;
-	printf("ch siz: %d\n argc siz:%d\n", ch, argc);
+	printf("chunk siz: %d\n argc siz:%d\n", ch, argc);
 	while (tempfront != NULL && i < argc)
 	{
 		if (tempfront->index <= ch)
@@ -77,11 +77,12 @@ int	first_index(stack *stack_a, int ch, int argc)
 		tempfront = tempfront->nx;
 		i++;
 	}
+	k++;
 	if (tempfront == NULL && i != 1)
 		tempfront = stack_a;
 	if (tempfront != NULL && i == argc)
 		i = 1;
-	if (argc == (argc - ch))
+	if (k == ch)
 		ch += ch;
 	printf("1st from top: %d, position> %d\n", tempfront->val, i);
 	printf("velikost K: %d\n", k);

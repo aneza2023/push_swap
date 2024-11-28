@@ -6,7 +6,7 @@
 /*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 00:29:11 by anezkahavra       #+#    #+#             */
-/*   Updated: 2024/11/28 15:50:12 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/28 17:38:38 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	back_to_a(stack **stack_a, stack **stack_b, int argc)
 	left = (argc - 1) % 5;
 	*stack_b = check_order(*stack_b, chunk, left);
 	printing_stacks(*stack_b);
-//	push_to_a(stack_a, stack_b);
+	push_to_a(stack_a, stack_b);
 	return (0);
 }
 

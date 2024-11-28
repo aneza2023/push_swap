@@ -13,7 +13,7 @@ SOURCES =	push_swap.c\
 			utils_algo_under100.c\
 
 OBJS = $(SOURCES:.c=.o)
-CC = cc
+CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 
 all:$(NAME)

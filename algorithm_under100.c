@@ -6,7 +6,7 @@
 /*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:09:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/28 00:11:42 by anezkahavra      ###   ########.fr       */
+/*   Updated: 2024/11/28 01:02:38 by anezkahavra      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,16 @@ int	algori_under100(stack *stack_a, stack *stack_b, int argc)
 	//	stack_b = checking_stack_b(stack_b);
 		stack_b_fp = &stack_b;
 		push_to_b(stack_a_fp, stack_b_fp);
-		argc--;
+	//	argc--; 	what was i using it for?
 		k++;
 		if (k == old_argc / 5){
 			chunk += old_argc / 5;
 			k = 0;
 		}
 	}
+	back_to_a(stack_a_fp, stack_b_fp, old_argc);
 	printing_stacks(stack_b);
+	printf("argc: %d", old_argc);
 	return (0);
 }
 
@@ -123,11 +125,11 @@ int	second_index(stack *stack_a, int ch, int argc)
 
 stack	*checking_stack_b(stack *stack_b)
 {
-	if (stack_b == NULL){
-		printf("stackb eror");
+	if (stack_b == NULL)
+	{
 		return (stack_b);
 	}
-	if (stack_b->index >= stack_b->nx->index)
+	if (stack_b->nx != NULL && (stack_b->index <= stack_b->nx->index))
 	{
 		stack_b = rotate_stack_b(stack_b);
 	}

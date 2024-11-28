@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/21 17:06:45 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/28 01:07:35 by anezkahavra      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,7 @@ int		first_index(stack *stack_a, int chunk, int argc);
 int		second_index(stack *stack_a, int chunk, int argc);
 stack	*checking_stack_b(stack *stack_b);
 stack	*allocation(stack *new_node);
+int 	back_to_a(stack **stack_a, stack **stack_b, int argc);
+stack 	*check_order(stack *stack_b, int chunk, int left);
 
 #endif

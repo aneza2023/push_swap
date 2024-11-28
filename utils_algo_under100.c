@@ -6,7 +6,7 @@
 /*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 00:29:11 by anezkahavra       #+#    #+#             */
-/*   Updated: 2024/11/28 01:15:03 by anezkahavra      ###   ########.fr       */
+/*   Updated: 2024/11/28 11:23:51 by anezkahavra      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int back_to_a(stack **stack_a, stack **stack_b, int argc)
     chunk = argc / 5;
     left = (argc - 1) % 5;
     *stack_b = check_order(*stack_b, chunk, left);
+    push_to_a(stack_a, stack_b);
     return (0);
 }
 
@@ -37,12 +38,12 @@ stack *check_order(stack *stack_b, int chunk, int left)
         i++;
     }
     k = 0;
-    while (stack_b != NULL)
+/*     while (stack_b != NULL)
     {
         stack_b = stack_b->prev;
         printf("stack B> prev>> %d", stack_b->index);
         k++;
-    }
+    } */
     printf("i> %d  +  k> %d", i, k);
     return (stack_b);
 }

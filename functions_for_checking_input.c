@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   functions_for_checking_input.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:08:31 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/21 15:29:14 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/28 11:08:13 by anezkahavra      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,8 @@ int	is_sign(int c)
 
 int	repetition(char *argv, stack *stack_a)
 {
-	int	i;
 	int	arg;
 
-	i = 1;
 	while (stack_a != NULL)
 	{
 		arg = atoi(argv);

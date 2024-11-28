@@ -6,7 +6,7 @@
 /*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:09:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/28 01:02:38 by anezkahavra      ###   ########.fr       */
+/*   Updated: 2024/11/28 11:08:33 by anezkahavra      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,6 @@ int	first_index(stack *stack_a, int ch, int argc)
 int	second_index(stack *stack_a, int ch, int argc)
 {
 	int		i;
-	int		k;
 	stack	*tempback;
 	stack	*temp;
 

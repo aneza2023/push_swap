@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm_under100.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
+/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:09:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/28 11:08:33 by anezkahavra      ###   ########.fr       */
+/*   Updated: 2024/11/28 17:32:04 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,24 +20,28 @@ int	algori_under100(stack *stack_a, stack *stack_b, int argc)
 	int				k;
 	int				old_argc;
 
-	chunk = argc / 5;
-	old_argc = argc;
+	chunk = (argc - 1) / 5;
+	old_argc = (argc - 1);
+	k = 0;
 	while (stack_a != NULL)
 	{
 		stack_a = cheapest_numer(stack_a, chunk, argc);
 		stack_a_fp = &stack_a;
-	//	stack_b = checking_stack_b(stack_b);
+		stack_b = checking_stack_b(stack_b);
 		stack_b_fp = &stack_b;
 		push_to_b(stack_a_fp, stack_b_fp);
-	//	argc--; 	what was i using it for?
+		argc--;
 		k++;
-		if (k == old_argc / 5){
+		if (k == 1)
+			printing_stacks(stack_b);
+		if (k == old_argc / 5)
+		{
 			chunk += old_argc / 5;
 			k = 0;
 		}
 	}
-	back_to_a(stack_a_fp, stack_b_fp, old_argc);
-	printing_stacks(stack_b);
+//	back_to_a(stack_a_fp, stack_b_fp, old_argc);
+//	printing_stacks(stack_b);
 	printf("argc: %d", old_argc);
 	return (0);
 }
@@ -130,7 +134,8 @@ stack	*checking_stack_b(stack *stack_b)
 	}
 	if (stack_b->nx != NULL && (stack_b->index <= stack_b->nx->index))
 	{
-		stack_b = rotate_stack_b(stack_b);
+		stack_b = swap_in_stack_b(stack_b);
 	}
+//	printing_stacks(stack_b);
 	return (stack_b);
 }

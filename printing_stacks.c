@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printing_stacks.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
+/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 14:29:02 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/28 00:08:13 by anezkahavra      ###   ########.fr       */
+/*   Updated: 2024/11/28 16:00:37 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	printing_stacks(stack *stack_a)
 {
-	if (stack_a == NULL){
+	if (stack_a == NULL)
+	{
 		printf("ERROR PRINT");
 		return (1);
 	}

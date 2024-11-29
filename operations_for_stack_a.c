@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operations_for_stack_a.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:27 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/28 16:23:10 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:18:17 by anezkahavra      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ stack	*swap_in_stack_a(stack *stack_a)
 	temp->val = stack_a->nx->val;
 	temp->index = stack_a->nx->index;
 	temp->prev = NULL;
-	if (stack_a->nx->nx != NULL)
+	if (stack_a->nx->nx == NULL)
+		stack_a->nx = NULL;
+	else if (stack_a->nx->nx != NULL)
 		stack_a->nx = stack_a->nx->nx;
 	stack_a->prev = temp;
 	temp->nx = stack_a;

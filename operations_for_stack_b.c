@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operations_for_stack_b.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
+/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:17 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/28 11:07:15 by anezkahavra      ###   ########.fr       */
+/*   Updated: 2024/11/29 10:56:04 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

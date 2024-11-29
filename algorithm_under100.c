@@ -6,7 +6,7 @@
 /*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:09:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/29 11:04:42 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/11/29 11:13:46 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int	first_index(stack *stack_a, int ch, int argc)
 		tempfront = stack_a;
 	if (tempfront != NULL && i == argc)
 		i = 1;
-//	printf("1st from top: %d (index %d), position> %d\n", tempfront->val, tempfront->index, i);
+	printf("1st from top: %d (index %d), position> %d\n", tempfront->val, tempfront->index, i);
 	return (i);
 }
 
@@ -120,7 +120,7 @@ int	second_index(stack *stack_a, int ch, int argc)
 		tempback = stack_a;
 	if (tempback != NULL && i == argc)
 		i = 1;
-//	printf("1st from back: %d (index %d), position> %d\n", tempback->val, tempback->index, i);
+	printf("1st from back: %d (index %d), position> %d\n", tempback->val, tempback->index, i);
 	return (i);
 }
 
@@ -131,9 +131,9 @@ stack	*checking_stack_b(stack *stack_b)
 		return (stack_b);
 	}
 	//this shit at fault probably
-	if (stack_b->index <= stack_b->nx->index)
+	if (stack_b->index < stack_b->nx->index)
 	{
-		stack_b = swap_in_stack_a(stack_b);
+		stack_b = swap_in_stack_b(stack_b);
 	}
 //	printing_stacks(stack_b);
 	return (stack_b);

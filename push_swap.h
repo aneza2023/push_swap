@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/28 16:20:26 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/12/02 14:08:47 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,6 @@ stack	*checking_stack_b(stack *stack_b);
 stack	*allocation(stack *new_node);
 int		back_to_a(stack *stack_a, stack *stack_b, int argc);
 stack	*check_order(stack *stack_b);
+int		ft_atoi(const char *nptr);
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm_under5.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 15:58:56 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/29 10:19:41 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/12/02 14:07:50 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ stack	*algori_for_3(stack *sa)
 			sa = rotate_stack_a(sa);
 		}
 	}
+	printing_stacks(sa);
 	return (sa);
 }
 
@@ -82,6 +83,6 @@ int	algori_under_5(stack *stack_a, stack *stack_b, int argc)
 	{
 		stack_a = reverse_rotate_a(stack_a);
 	}
-//	printing_stacks(stack_a);
+	printing_stacks(stack_a);
 	return (0);
 }

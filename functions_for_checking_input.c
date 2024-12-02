@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   functions_for_checking_input.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:08:31 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/28 11:08:13 by anezkahavra      ###   ########.fr       */
+/*   Updated: 2024/12/02 14:16:36 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@ int	not_number(char *argv)
 	int	i;
 
 	i = 0;
+	if (ft_atoi(argv))
+		return (0);
 	while (argv[i] != '\0')
 	{
 		if (is_not_num(argv[i]) == 1)
 			return (1);
-		else if ((is_sign(argv[i]) == 1) && (is_not_num(argv[i + 1] != 1)))
+		else if (is_sign(argv[i]) == 1)
 			return (1);
 		else
 			i++;

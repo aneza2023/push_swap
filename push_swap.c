@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:20:10 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/29 16:19:29 by anezkahavra      ###   ########.fr       */
+/*   Updated: 2024/12/02 14:14:41 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(int argc, char *argv[])
 		return (1);
 	while (i >= 1)
 	{
-		arg = atoi(argv[i]);
+		arg = ft_atoi(argv[i]);
 		arr_arg[i] = arg;
 		stack_a = inserting_arg(stack_a, arg);
 		i--;

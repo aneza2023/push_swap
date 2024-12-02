@@ -20,9 +20,9 @@ int	not_number(char *argv)
 	i = 0;
 	while (argv[i] != '\0')
 	{
-		if (is_alpha(argv[i]) == 1)
+		if (is_not_num(argv[i]) == 1)
 			return (1);
-		else if ((is_sign(argv[i]) == 1) && (i != 0))
+		else if ((is_sign(argv[i]) == 1) && (is_not_num(argv[i + 1] != 1)))
 			return (1);
 		else
 			i++;
@@ -30,8 +30,7 @@ int	not_number(char *argv)
 	return (0);
 }
 
-
-int	is_alpha(int c)
+int	is_not_num(int c)
 {
 	if ((c >= 1 && c <= 42) || (c == 44))
 		return (1);

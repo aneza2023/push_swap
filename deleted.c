@@ -52,3 +52,25 @@
 	printing_stacks(stack_b);
 	return (0);
 } */
+
+
+	/* int	i;
+	int	k;
+
+	i = 1;
+//	printf("chunk> %d, left> %d", chunk, left);
+	while (i < (chunk + left))
+	{
+	if ((stack_b)->index < (stack_b)->nx->index)
+		stack_b = swap_in_stack_b(stack_b);
+	stack_b = stack_b->nx;
+	i++;
+	}
+	k = 0;
+/*	 while (stack_b != NULL)
+	{
+	stack_b = stack_b->prev;
+	printf("stack B> prev>> %d", stack_b->index);
+	k++;
+	} */
+//	printf("i> %d  +  k> %d", i, k); */

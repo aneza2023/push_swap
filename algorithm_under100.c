@@ -28,8 +28,8 @@ int	algori_under100(stack *stack_a, stack *stack_b, int argc)
 		stack_a = cheapest_numer(stack_a, chunk, argc);
 		stack_a_fp = &stack_a;
 		stack_b_fp = &stack_b;
+		stack_b = checking_stack_b(stack_b); //was unnder push, worked
 		push_to_b(stack_a_fp, stack_b_fp);
-		stack_b = checking_stack_b(stack_b); // problem here, 1st number twice when above 20?
 	//	argc--;		// maybe not needed, used before
 		k++;
 		if (k == old_argc / 5)
@@ -38,8 +38,8 @@ int	algori_under100(stack *stack_a, stack *stack_b, int argc)
 			k = 0;
 		}
 	}
-//	back_to_a(stack_a_fp, stack_b_fp, old_argc);
-	printing_stacks(stack_b);
+	back_to_a(stack_a, stack_b, old_argc);
+//	printing_stacks(stack_b);
 	printf("argc: %d", old_argc);
 	return (0);
 }

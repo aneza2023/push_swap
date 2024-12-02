@@ -12,40 +12,34 @@
 
 #include "push_swap.h"
 
-int	back_to_a(stack **stack_a, stack **stack_b, int argc)
+int	back_to_a(stack *stack_a, stack *stack_b, int argc)
 {
-	int	chunk;
-	int	left;
+	stack	**stack_a_fp;
+	stack	**stack_b_fp;
 
-	chunk = argc / 5;
-	left = (argc - 1) % 5;
-	*stack_b = check_order(*stack_b, chunk, left);
-//	printing_stacks(*stack_b);
-	push_to_a(stack_a, stack_b);
+	printing_stacks(stack_b);
+	stack_a_fp = &stack_a;
+	stack_b_fp = &stack_b;
+	while (stack_b != NULL)
+	{	
+		stack_b = check_order(stack_b);
+		push_to_a(stack_a_fp, stack_b_fp);
+	}
+	printing_stacks(stack_a);
 	return (0);
 }
 
-stack	*check_order(stack *stack_b, int chunk, int left)
+stack	*check_order(stack *stack_b)
 {
-	int	i;
-	int	k;
-
-	i = 1;
-//	printf("chunk> %d, left> %d", chunk, left);
-	while (i < (chunk + left))
+	if (stack_b == NULL || stack_b->nx == NULL)
 	{
-	if ((stack_b)->index < (stack_b)->nx->index)
-		stack_b = swap_in_stack_b(stack_b);
-	stack_b = stack_b->nx;
-	i++;
+		return (stack_b);
 	}
-	k = 0;
-/*	 while (stack_b != NULL)
+	//this shit at fault probably
+	if (stack_b->index < stack_b->nx->index)
 	{
-	stack_b = stack_b->prev;
-	printf("stack B> prev>> %d", stack_b->index);
-	k++;
-	} */
-//	printf("i> %d  +  k> %d", i, k);
+		stack_b = swap_in_stack_b(stack_b);
+	}
+//	printing_stacks(stack_b);
 	return (stack_b);
 }

@@ -56,7 +56,7 @@ int		first_index(stack *stack_a, int chunk, int argc);
 int		second_index(stack *stack_a, int chunk, int argc);
 stack	*checking_stack_b(stack *stack_b);
 stack	*allocation(stack *new_node);
-int		back_to_a(stack **stack_a, stack **stack_b, int argc);
-stack	*check_order(stack *stack_b, int chunk, int left);
+int		back_to_a(stack *stack_a, stack *stack_b, int argc);
+stack	*check_order(stack *stack_b);
 
 #endif

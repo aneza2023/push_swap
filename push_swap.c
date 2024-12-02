@@ -25,16 +25,6 @@ int	main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	i = 1;
-	while (argv[i] != NULL)
-	{
-		if (not_number(argv[i]) == 1)
-		{
-			printf("Error\n");
-			return (1);
-		}
-		i++;
-	}
 	i = argc - 1;
 	stack_a = NULL;
 	arr_arg = (int *)malloc(argc *(sizeof(int)));
@@ -51,7 +41,7 @@ int	main(int argc, char *argv[])
 	i = 1;
 	while (argv[i] != NULL)
 	{
-		if (repetition(argv[i], stack_a) == 1)
+		if (repetition(argv[i], stack_a) == 1 || (not_number(argv[i]) == 1))
 		{
 			printf("Error\n");
 			return (1);
@@ -61,7 +51,5 @@ int	main(int argc, char *argv[])
 	stack_a_fp = &stack_a;
 	add_index(arr_arg, stack_a_fp, argc);
 	algorithm(stack_a, argc);
-//	stack_a = swap_in_stack_b(stack_a);
-//	printing_stacks(stack_a);
 	return (0);
 }

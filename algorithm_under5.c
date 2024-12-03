@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 15:58:56 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/02 14:07:50 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/03 09:00:39 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,7 @@ int	algori_under_5(stack *stack_a, stack *stack_b, int argc)
 	if (argc > 5)
 		push_to_b(stack_a_fp, stack_b_fp);
 	stack_a = algori_for_3(stack_a);
-	if (stack_b->nx != NULL && stack_b->val > stack_b->nx->val)
-		swap_in_stack_b(stack_b);
-	while (stack_b != NULL)
+ 	while (stack_b != NULL)
 	{
 		if (stack_b->val >= stack_a->val && stack_b->val <= stack_a->nx->val)
 		{
@@ -78,7 +76,7 @@ int	algori_under_5(stack *stack_a, stack *stack_b, int argc)
 		}
 		else
 			stack_a = rotate_stack_a(stack_a);
-	}
+	} 
 	while (stack_a->index != 1)
 	{
 		stack_a = reverse_rotate_a(stack_a);

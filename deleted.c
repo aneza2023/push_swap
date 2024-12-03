@@ -1,3 +1,29 @@
+
+// deleted from algo_under5
+
+/* 	while (stack_b != NULL)
+	{
+		if (stack_b->val >= stack_a->val && stack_b->val <= stack_a->nx->val)
+		{
+			push_to_a(stack_a_fp, stack_b_fp);
+			stack_a = swap_in_stack_a(stack_a);
+		}
+		else if (stack_b->index >= 4 && stack_b->index >= stack_a->index)
+		{
+			push_to_a(stack_a_fp, stack_b_fp);
+			stack_a = rotate_stack_a(stack_a);
+		}
+		else if (stack_b->index <= 2)
+		{
+			push_to_a(stack_a_fp, stack_b_fp);
+		}
+		else
+			stack_a = rotate_stack_a(stack_a);
+	} */
+
+/* 	if (stack_b->nx != NULL && stack_b->val < stack_b->nx->val)
+		stack_b = swap_in_stack_b(stack_b); */
+
 /* int	algori_under100(stack **stack_a, stack **stack_b, int argc)
 {
 	int		i;

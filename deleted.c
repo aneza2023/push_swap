@@ -1,6 +1,100 @@
 
 // deleted from algo_under5
 
+/* int	algori_under_5(stack *stack_a, stack *stack_b, int argc)
+{
+	stack	**stack_a_fp;
+	stack	**stack_b_fp;
+
+	stack_a_fp = &stack_a;
+	stack_b_fp = &stack_b;
+	push_to_b(stack_a_fp, stack_b_fp);
+	if (argc > 5)
+		push_to_b(stack_a_fp, stack_b_fp);
+	stack_a = algori_for_3(stack_a);
+	if (stack_b->nx != NULL && stack_b->val < stack_b->nx->val)
+		stack_b = swap_in_stack_b(stack_b);
+	another_check(stack_a, stack_b);
+	return (0);
+}
+int	another_check(stack *stack_a, stack *stack_b)
+{
+	stack	**stack_a_fp;
+	stack	**stack_b_fp;
+	int		i;
+
+	stack_a_fp = &stack_a;
+	stack_b_fp = &stack_b;
+	i = 0;
+	while (stack_b->nx != NULL && i < 1){
+		if (stack_b->index == 5 || (stack_b->index <= 3 && stack_b->nx->index == 1))
+			push_to_a(stack_a_fp, stack_b_fp);
+		else if (stack_b->index == 4 || (stack_b->index == 3 && stack_b->nx->index == 2))
+			stack_a = reverse_rotate_a(stack_a);
+		i++;
+	}
+	if (stack_b->index == (stack_a->index - 1))
+		push_to_a(stack_a_fp, stack_b_fp);
+	if (stack_b->index <= 2 && stack_a->index >= 4)
+		stack_a = rotate_stack_a(stack_a);
+	if (stack_b->index <= 2 && stack_a->index == 5 || stack_b->index == 1)
+		stack_a = rotate_stack_a(stack_a);
+	if ((stack_a->index == 4 && stack_b->index == 2) || (stack_a->index == 5 && stack_b->index == 3))
+		stack_a = reverse_rotate_a(stack_a);
+	else
+		and_another(stack_a, stack_b);
+	printing_stacks(stack_a);
+	printf("\n\n\n\n");
+	return (0);
+}
+
+int	and_another(stack *stack_a, stack *stack_b)
+{
+	stack	**stack_a_fp;
+	stack	**stack_b_fp;
+	int		i;
+
+	stack_a_fp = &stack_a;
+	stack_b_fp = &stack_b;
+	if (stack_a->index == 3 && stack_a->nx->index == 2)
+		stack_a = swap_in_stack_a(stack_a);
+	while (stack_b != NULL){
+		push_to_a(stack_a_fp, stack_b_fp);
+	}
+	while (stack_a->index != 1)
+	{
+		stack_a = rotate_stack_a(stack_a);
+	}
+	printing_stacks(stack_b);
+	return (0);
+}/ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 	while (stack_b != NULL)
 	{
 		if (stack_b->val >= stack_a->val && stack_b->val <= stack_a->nx->val)

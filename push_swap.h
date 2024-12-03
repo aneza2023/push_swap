@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/02 14:08:47 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/03 14:21:17 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,6 @@ stack	*allocation(stack *new_node);
 int		back_to_a(stack *stack_a, stack *stack_b, int argc);
 stack	*check_order(stack *stack_b);
 int		ft_atoi(const char *nptr);
-
+int		another_check(stack *stack_a, stack *stack_b);
+int		and_another(stack *stack_a, stack *stack_b);
 #endif

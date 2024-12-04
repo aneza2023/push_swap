@@ -3,22 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   operations_for_stack_a.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:27 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/29 16:18:17 by anezkahavra      ###   ########.fr       */
+/*   Updated: 2024/12/04 13:13:58 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// putting values of 2nd in temp
-// deleting 2nds
-// stack_a->next->next->prev = stack_a;
-// setting temp as 1st
-// stack_a->prev = temp;
-
-// pripojit end_node
-// set to start
-
 
 #include "push_swap.h"
 

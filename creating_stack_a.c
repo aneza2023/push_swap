@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   creating_stack_a.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:36:36 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/21 15:29:29 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/12/04 13:13:20 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// maybe could add a pointer to a previous node
 stack	*inserting_arg(stack *stack_a, int arg)
 {
 	stack	*new_node;
@@ -31,7 +30,6 @@ stack	*inserting_arg(stack *stack_a, int arg)
 	return (new_node);
 }
 
-//add index for easier sorting
 int	*sorting_for_index(int *arr_arg, int argc)
 {
 	int	i;

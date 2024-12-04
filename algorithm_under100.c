@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm_under100.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:09:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/11/29 15:58:42 by anezkahavra      ###   ########.fr       */
+/*   Updated: 2024/12/04 13:12:14 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@ int	algori_under100(stack *stack_a, stack *stack_b, int argc)
 		stack_a = cheapest_numer(stack_a, chunk, argc);
 		stack_a_fp = &stack_a;
 		stack_b_fp = &stack_b;
-		stack_b = checking_stack_b(stack_b); //was unnder push, worked
+		stack_b = checking_stack_b(stack_b); 
 		push_to_b(stack_a_fp, stack_b_fp);
-	//	argc--;		// maybe not needed, used before
 		k++;
 		if (k == old_argc / 5)
 		{
@@ -39,8 +38,6 @@ int	algori_under100(stack *stack_a, stack *stack_b, int argc)
 		}
 	}
 	back_to_a(stack_a, stack_b, old_argc);
-//	printing_stacks(stack_b);
-	printf("argc: %d", old_argc);
 	return (0);
 }
 
@@ -69,7 +66,6 @@ stack	*cheapest_numer(stack *stack_a, int chunk, int argc)
 			sec--;
 		}
 	}
-//	printing_stacks(stack_a);
 	return (stack_a);
 }
 
@@ -80,7 +76,6 @@ int	first_index(stack *stack_a, int ch, int argc)
 
 	tempfront = stack_a;
 	i = 1;
-//	printf("chunk siz: %d\n argc siz:%d\n", ch, argc);
 	while (tempfront != NULL && i < argc)
 	{
 		if (tempfront->index <= ch)
@@ -92,7 +87,6 @@ int	first_index(stack *stack_a, int ch, int argc)
 		tempfront = stack_a;
 	if (tempfront != NULL && i == argc)
 		i = 1;
-//	printf("1st from top: %d (index %d), position> %d\n", tempfront->val, tempfront->index, i);
 	return (i);
 }
 
@@ -120,7 +114,6 @@ int	second_index(stack *stack_a, int ch, int argc)
 		tempback = stack_a;
 	if (tempback != NULL && i == argc)
 		i = 1;
-//	printf("1st from back: %d (index %d), position> %d\n", tempback->val, tempback->index, i);
 	return (i);
 }
 
@@ -130,11 +123,9 @@ stack	*checking_stack_b(stack *stack_b)
 	{
 		return (stack_b);
 	}
-	//this shit at fault probably
 	if (stack_b->index < stack_b->nx->index)
 	{
 		stack_b = swap_in_stack_b(stack_b);
 	}
-//	printing_stacks(stack_b);
 	return (stack_b);
 }

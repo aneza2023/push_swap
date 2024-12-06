@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:36:36 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/06 11:42:27 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/06 14:43:21 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ stack	*add_index(int *arr_arg, stack *stack_a, int argc)
 		(temp) = (temp)->nx;
 	}
 	temp = stack_a;
+	algorithm(temp, argc);
 	return (temp);
 }

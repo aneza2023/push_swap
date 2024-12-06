@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+	/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   functions_for_checking_input.c                     :+:      :+:    :+:   */
@@ -13,22 +13,10 @@
 #include "push_swap.h"
 
 // add check for long int, neg/pos, vyzkouset pomlcku zvlast
-int	not_number(char *argv)
+int	is_num(int c)
 {
-	int	i;
-
-	i = 0;
-	if (ft_atoi(argv))
-		return (0);
-	while (argv[i] != '\0')
-	{
-		if (is_not_num(argv[i]) == 1)
-			return (1);
-		else if (is_sign(argv[i]) == 1)
-			return (1);
-		else
-			i++;
-	}
+	if (c >= 48 && c <= 57)
+		return (1);
 	return (0);
 }
 
@@ -48,23 +36,30 @@ int	is_sign(int c)
 	return (0);
 }
 
-int	repetition(char *argv, stack *stack_a)
+int	repetition(int argc, stack *stack_a)
 {
-	int	arg;
+	stack	*temp;
 
+	temp = allocation(temp);
+	if (temp == NULL)
+		return (1);
+	temp = stack_a;
 	while (stack_a != NULL)
 	{
-		arg = atoi(argv);
-		if (stack_a->val == arg)
+		if (stack_a->val == temp->val)
 		{
 			while (stack_a->nx != NULL)
 			{
-				if (stack_a->nx->val == arg)
+				if (stack_a->nx->val == temp->val)
+				{
+					printf("Error\n");
 					return (1);
+				}
 				stack_a = stack_a->nx;
 			}
 		}
 		stack_a = stack_a->nx;
+		temp = temp->nx;
 	}
 	return (0);
 }

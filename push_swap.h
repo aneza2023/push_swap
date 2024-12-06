@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/06 11:44:31 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/06 14:48:57 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ stack	*rotate_stack_b(stack *stack_b);
 stack	*reverse_rotate_b(stack *stack_b);
 int		push_to_a(stack **stack_a, stack **stack_b);
 int		push_to_b(stack **stack_a, stack **stack_b);
-int		not_number(char *argv);
+int		is_num(int c);
 int		is_not_num(int c);
 int		is_sign(int c);
-int		repetition(char *argv, stack *stack_a);
+int		repetition(int argc, stack *stack_a);
 int		algori_under100(stack *stack_a, stack *stack_b, int argc);
 int		*sorting_for_index(int *arr_arg, int argc);
 stack	*add_index(int *arr_arg, stack *stack_a, int argc);

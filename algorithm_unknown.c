@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm_unknown.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 15:22:57 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/21 15:23:13 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/12/06 14:48:47 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ int	algorithm(stack *stack_a, int argc)
 {
 	stack	*stack_b;
 
+	if (repetition(argc, stack_a) == 1)
+	{
+		printf("Error\n");
+		return (1);
+	}
 	stack_b = NULL;
 	if (argc == 3)
 		algori_for_2(stack_a);

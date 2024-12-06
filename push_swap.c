@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:20:10 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/06 14:28:28 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/06 15:29:49 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,11 @@ int	checking_input(char *argv, int argc)
 			printf("Error\n");
 			return (1);
 		}	
-		else if (ft_atoi(argv))
+		if (modified_atoi(argv) > 2147483647 || modified_atoi(argv) < -2147483648)
+		{
+			printf("Error\n");
+			return (1);
+		}
 		i++;
 	}
 	return (0);
@@ -56,10 +60,11 @@ int	main(int argc, char *argv[])
 	{
 		if (checking_input(argv[i], argc) == 1)
 			return (1);
-		arr_arg[i] = arg = atoi(argv[i]);	
+		arr_arg[i] = arg = ft_atoi(argv[i]);	
 		stack_a = inserting_arg(stack_a, arg);
 		i--;
 	}
 	stack_a = add_index(arr_arg, stack_a, argc);	
+//	printing_stacks(stack_a);	
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/06 14:48:57 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/06 15:22:01 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ int		repetition(int argc, stack *stack_a);
 int		algori_under100(stack *stack_a, stack *stack_b, int argc);
 int		*sorting_for_index(int *arr_arg, int argc);
 stack	*add_index(int *arr_arg, stack *stack_a, int argc);
-int		numbering(int argc);
 int		printing_stacks(stack *stack_a);
 int		algorithm(stack *stack_a, int argc);
 int		algori_for_2(stack *stack_a);
@@ -57,12 +56,11 @@ int		second_index(stack *stack_a, int chunk, int argc);
 stack	*checking_stack_b(stack *stack_b);
 stack	*allocation(stack *new_node);
 int		back_to_a(stack *stack_a, stack *stack_b, int argc);
-stack	*check_order(stack *stack_b);
 int		ft_atoi(const char *nptr);
+long int	modified_atoi(const char *nptr);
 int		first_round(stack *stack_a, stack *stack_b);
 int		second_round(stack *stack_a, stack *stack_b);
 int		third_round(stack *stack_a);
-int	checking_input(char *argv, int argc);
-stack	*before_creating(int arg, int argc, stack *stack_a);
+int		checking_input(char *argv, int argc);
 
 #endif

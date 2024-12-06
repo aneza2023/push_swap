@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:36:36 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/04 13:13:20 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/06 11:42:27 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,13 @@ int	*sorting_for_index(int *arr_arg, int argc)
 	return (arr_arg);
 }
 
-int	add_index(int *arr_arg, stack **stack_a, int argc)
+stack	*add_index(int *arr_arg, stack *stack_a, int argc)
 {
 	int		i;
 	stack	*temp;
 
-	temp = *stack_a;
+	arr_arg = sorting_for_index(arr_arg, argc);
+	temp = stack_a;
 	while (temp != NULL)
 	{
 		i = 1;
@@ -72,6 +73,6 @@ int	add_index(int *arr_arg, stack **stack_a, int argc)
 		}
 		(temp) = (temp)->nx;
 	}
-	temp = *stack_a;
-	return (0);
+	temp = stack_a;
+	return (temp);
 }

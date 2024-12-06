@@ -44,21 +44,22 @@ int	repetition(int argc, stack *stack_a)
 	if (temp == NULL)
 		return (1);
 	temp = stack_a;
-	while (stack_a != NULL)
+	while (temp != NULL)
 	{
-		if (stack_a->val == temp->val)
+		stack_a = temp;
+		while (stack_a != NULL)
 		{
-			while (stack_a->nx != NULL)
+			if (stack_a->val == temp->val)
 			{
-				if (stack_a->nx->val == temp->val)
+				while (stack_a->nx != NULL)
 				{
-					printf("Error\n");
-					return (1);
+					if (stack_a->nx->val == temp->val)
+						return (1);
+					stack_a = stack_a->nx;
 				}
-				stack_a = stack_a->nx;
-			}
+			}	
+			stack_a = stack_a->nx;
 		}
-		stack_a = stack_a->nx;
 		temp = temp->nx;
 	}
 	return (0);

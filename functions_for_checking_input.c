@@ -12,7 +12,6 @@
 
 #include "push_swap.h"
 
-// add check for long int, neg/pos, vyzkouset pomlcku zvlast
 int	is_num(int c)
 {
 	if (c >= 48 && c <= 57)

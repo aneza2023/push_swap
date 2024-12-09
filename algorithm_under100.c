@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:09:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/04 13:12:14 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/09 08:14:00 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	algori_under100(stack *stack_a, stack *stack_b, int argc)
 			k = 0;
 		}
 	}
-	back_to_a(stack_a, stack_b, old_argc);
+	back_to_a(stack_a, stack_b);
 	return (0);
 }
 

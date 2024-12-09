@@ -6,13 +6,13 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 00:29:11 by anezkahavra       #+#    #+#             */
-/*   Updated: 2024/12/04 13:12:47 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/09 08:13:02 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	back_to_a(stack *stack_a, stack *stack_b, int argc)
+int	back_to_a(stack *stack_a, stack *stack_b)
 {
 	stack	**stack_a_fp;
 	stack	**stack_b_fp;

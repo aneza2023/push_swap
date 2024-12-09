@@ -36,11 +36,11 @@ int	is_sign(int c)
 	return (0);
 }
 
-int	repetition(int argc, stack *stack_a)
+int	repetition(stack *stack_a)
 {
 	stack	*temp;
 
-	temp = allocation(temp);
+	temp = (stack *)malloc(sizeof(stack));
 	if (temp == NULL)
 		return (1);
 	temp = stack_a;

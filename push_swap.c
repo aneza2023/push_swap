@@ -6,13 +6,13 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:20:10 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/06 15:29:49 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/07 19:07:32 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	checking_input(char *argv, int argc)
+int	checking_input(char *argv)
 {
 	int i;
 	
@@ -58,7 +58,7 @@ int	main(int argc, char *argv[])
 		return (1);
 	while (i >= 1) 
 	{
-		if (checking_input(argv[i], argc) == 1)
+		if (checking_input(argv[i]) == 1)
 			return (1);
 		arr_arg[i] = arg = ft_atoi(argv[i]);	
 		stack_a = inserting_arg(stack_a, arg);

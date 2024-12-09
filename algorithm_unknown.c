@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 15:22:57 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/06 15:14:05 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/09 08:12:23 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	algorithm(stack *stack_a, int argc)
 {
 	stack	*stack_b;
 
-	if (repetition(argc, stack_a) == 1)
+	if (repetition(stack_a) == 1)
 	{
 		printf("Error\n");
 		return (1);

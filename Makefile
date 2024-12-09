@@ -11,6 +11,8 @@ SOURCES =	push_swap.c\
 			algorithm_unknown.c\
 			algorithm_under100.c\
 			utils_algo_under100.c\
+			ft_atoi.c\
+			modified_atoi.c\
 
 OBJS = $(SOURCES:.c=.o)
 CC = cc

@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/09 08:17:16 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/11 10:03:32 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,6 @@ int		first_round(stack *stack_a, stack *stack_b);
 int		second_round(stack *stack_a, stack *stack_b);
 int		third_round(stack *stack_a);
 int		checking_input(char *argv);
+int	algori_under500(stack *stack_a, stack *stack_b, int argc);
 
 #endif

@@ -10,6 +10,7 @@ SOURCES =	push_swap.c\
 			algorithm_under5.c\
 			algorithm_unknown.c\
 			algorithm_under100.c\
+			algorithm_under500.c\
 			utils_algo_under100.c\
 			ft_atoi.c\
 			modified_atoi.c\

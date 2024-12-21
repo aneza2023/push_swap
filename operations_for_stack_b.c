@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operations_for_stack_b.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anezkahavrankova <anezkahavrankova@stud    +#+  +:+       +#+        */
+/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:17 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/29 16:18:41 by anezkahavra      ###   ########.fr       */
+/*   Updated: 2024/12/21 11:17:53 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ stack	*swap_in_stack_b(stack *stack_b)
 
 	if (stack_b->nx == NULL)
 		return (stack_b);
-	temp = NULL;
-	temp = allocation(temp);
+	temp = allocation();
 	if (temp == NULL)
 		return (stack_b);
 	temp->val = stack_b->nx->val;
@@ -45,8 +44,7 @@ stack	*rotate_stack_b(stack *stack_b)
 	if (stack_b->nx == NULL)
 		return (stack_b);
 	head = &stack_b->nx;
-	end_node = NULL;
-	end_node = allocation(end_node);
+	end_node = allocation();
 	if (end_node == NULL)
 		return (stack_b);
 	end_node->val = stack_b->val;
@@ -73,8 +71,7 @@ stack	*reverse_rotate_b(stack *stack_b)
 	if (stack_b->nx == NULL)
 		return (stack_b);
 	head = &stack_b;
-	first_node = NULL;
-	first_node = allocation(first_node);
+	first_node = allocation();
 	if (first_node == NULL)
 		return (stack_b);
 	temp = stack_b;
@@ -97,8 +94,7 @@ int	push_to_b(stack **stack_a, stack **stack_b)
 
 	if (*stack_a == NULL)
 		return (0);
-	pushed_stack = NULL;
-	pushed_stack = allocation(pushed_stack);
+	pushed_stack = allocation();
 	if (pushed_stack == NULL)
 		return (0);
 	pushed_stack->val = (*stack_a)->val;

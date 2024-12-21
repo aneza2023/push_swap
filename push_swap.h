@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/11 10:03:32 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/21 11:14:56 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ stack	*cheapest_numer(stack *stack_a, int chunk, int argc);
 int		first_index(stack *stack_a, int chunk, int argc);
 int		second_index(stack *stack_a, int chunk, int argc);
 stack	*checking_stack_b(stack *stack_b);
-stack	*allocation(stack *new_node);
+stack	*allocation();
 int		back_to_a(stack *stack_a, stack *stack_b);
 int		ft_atoi(const char *nptr);
 long int	modified_atoi(const char *nptr);

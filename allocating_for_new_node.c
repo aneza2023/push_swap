@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   allocating_for_new_node.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
+/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 14:45:33 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/21 15:12:46 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/12/21 11:16:53 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-stack	*allocation(stack *new_node)
+stack	*allocation()
 {
+	stack	*new_node;
+	
 	new_node = (stack *)malloc(sizeof(stack));
 	if (new_node == NULL)
 	{

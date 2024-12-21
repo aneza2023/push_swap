@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operations_for_stack_a.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:27 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/04 13:13:58 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/21 11:16:18 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ stack	*swap_in_stack_a(stack *stack_a)
 
 	if (stack_a->nx == NULL)
 		return (stack_a);
-	temp = NULL;
-	temp = allocation(temp);
+	temp = allocation();
 	if (temp == NULL)
 		return (stack_a);
 	temp->val = stack_a->nx->val;
@@ -32,10 +31,11 @@ stack	*swap_in_stack_a(stack *stack_a)
 	stack_a->prev = temp;
 	temp->nx = stack_a;
 	stack_a = temp;
+//	free(temp);
 	printf("sa\n");
 	return (stack_a);
 }
-
+// proc neallokuju head
 stack	*rotate_stack_a(stack *stack_a)
 {
 	stack	*end_node;
@@ -45,8 +45,7 @@ stack	*rotate_stack_a(stack *stack_a)
 	if (stack_a->nx == NULL)
 		return (stack_a);
 	head = &stack_a->nx;
-	end_node = NULL;
-	end_node = allocation(end_node);
+	end_node = allocation();
 	if (end_node == NULL)
 		return (stack_a);
 	end_node->val = stack_a->val;
@@ -61,6 +60,7 @@ stack	*rotate_stack_a(stack *stack_a)
 	stack_a->nx = end_node;
 	end_node->prev = stack_a;
 	stack_a = *head;
+//	free(end_node);
 	printf("ra\n");
 	return (stack_a);
 }
@@ -75,8 +75,7 @@ stack	*reverse_rotate_a(stack *stack_a)
 	if (stack_a->nx == NULL)
 		return (stack_a);
 	head = &stack_a;
-	first_node = NULL;
-	first_node = allocation(first_node);
+	first_node = allocation();
 	if (first_node == NULL)
 		return (stack_a);
 	temp = stack_a;
@@ -101,8 +100,7 @@ int	push_to_a(stack **stack_a, stack **stack_b)
 
 	if (*stack_b == NULL)
 		return (0);
-	pushed_stack = NULL;
-	pushed_stack = allocation(pushed_stack);
+	pushed_stack = allocation();
 	if (pushed_stack == NULL)
 		return (0);
 	pushed_stack->val = (*stack_b)->val;

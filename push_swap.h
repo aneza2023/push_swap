@@ -6,7 +6,7 @@
 /*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/21 11:14:56 by naomi            ###   ########.fr       */
+/*   Updated: 2024/12/27 14:12:57 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int		first_index(stack *stack_a, int chunk, int argc);
 int		second_index(stack *stack_a, int chunk, int argc);
 stack	*checking_stack_b(stack *stack_b);
 stack	*allocation();
-int		back_to_a(stack *stack_a, stack *stack_b);
+int		back_to_a(stack *stack_a, stack *stack_b, int argc);
 int		ft_atoi(const char *nptr);
 long int	modified_atoi(const char *nptr);
 int		first_round(stack *stack_a, stack *stack_b);
@@ -63,5 +63,7 @@ int		second_round(stack *stack_a, stack *stack_b);
 int		third_round(stack *stack_a);
 int		checking_input(char *argv);
 int	algori_under500(stack *stack_a, stack *stack_b, int argc);
+int	rearanging_stack_b(stack *stack_a, stack *stack_b, int argc);
+int	where_biggest(stack *stack_b, int argc);
 
 #endif

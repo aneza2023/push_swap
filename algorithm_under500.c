@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm_under500.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 10:00:39 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/11 10:03:16 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/27 15:11:54 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ int	algori_under500(stack *stack_a, stack *stack_b, int argc)
 		stack_b = checking_stack_b(stack_b); 
 		push_to_b(stack_a_fp, stack_b_fp);
 		k++;
-		if (k == old_argc / 5)
+		if (k == old_argc / 11)
 		{
-			chunk += old_argc / 5;
+			chunk += old_argc / 11;
 			k = 0;
 		}
 	}
-	back_to_a(stack_a, stack_b);
+	rearanging_stack_b(stack_a, stack_b, argc);
 	return (0);
 }

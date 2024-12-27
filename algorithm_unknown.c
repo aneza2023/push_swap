@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm_unknown.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 15:22:57 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/11 10:01:52 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/27 15:07:45 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	algorithm(stack *stack_a, int argc)
 		algori_under_5(stack_a, stack_b, argc);
 	else if (argc > 6 && argc <= 100)
 		algori_under100(stack_a, stack_b, argc);
-	else if (argc > 100 && argc <= 500)
+	else if (argc > 100)
 		algori_under500(stack_a, stack_b, argc);
 	return (0);
 }

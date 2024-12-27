@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm_under100.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:09:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/09 08:14:00 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/27 15:17:50 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	algori_under100(stack *stack_a, stack *stack_b, int argc)
 			k = 0;
 		}
 	}
-	back_to_a(stack_a, stack_b);
+	rearanging_stack_b(stack_a, stack_b, argc);
 	return (0);
 }
 

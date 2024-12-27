@@ -6,7 +6,7 @@
 /*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:27 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/21 11:16:18 by naomi            ###   ########.fr       */
+/*   Updated: 2024/12/21 15:04:51 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,13 @@ stack	*swap_in_stack_a(stack *stack_a)
 	temp->prev = NULL;
 	if (stack_a->nx->nx == NULL)
 		stack_a->nx = NULL;
-	else if (stack_a->nx->nx != NULL)
-		stack_a->nx = stack_a->nx->nx;
+	else if (stack_a->nx->nx != NULL){
+		stack_a->nx->nx->prev = stack_a;
+	//	free(stack_a->nx);
+		}
 	stack_a->prev = temp;
 	temp->nx = stack_a;
 	stack_a = temp;
-//	free(temp);
 	printf("sa\n");
 	return (stack_a);
 }

@@ -6,7 +6,7 @@
 /*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:17 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/21 11:17:53 by naomi            ###   ########.fr       */
+/*   Updated: 2024/12/27 18:14:56 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,12 @@ stack	*swap_in_stack_b(stack *stack_b)
 	temp->val = stack_b->nx->val;
 	temp->index = stack_b->nx->index;
 	temp->prev = NULL;
-	if (stack_b->nx->nx != NULL)
-		stack_b->nx = stack_b->nx->nx;
+	if (stack_b->nx->nx != NULL){
+		stack_b->nx->nx->prev = stack_b;
+		free(stack_b->nx);
+		}
 	else if (stack_b->nx->nx == NULL)
-		stack_b->nx = NULL;
+		free(stack_b->nx);
 	stack_b->prev = temp;
 	temp->nx = stack_b;
 	stack_b = temp;
@@ -38,26 +40,24 @@ stack	*swap_in_stack_b(stack *stack_b)
 stack	*rotate_stack_b(stack *stack_b)
 {
 	stack	*end_node;
-	stack	**head;
-	int		i;
+	stack	*head;
 
 	if (stack_b->nx == NULL)
 		return (stack_b);
-	head = &stack_b->nx;
+	head = stack_b->nx;
+	head->prev = NULL;
 	end_node = allocation();
 	if (end_node == NULL)
 		return (stack_b);
 	end_node->val = stack_b->val;
 	end_node->index = stack_b->index;
 	end_node->nx = NULL;
-	i = 1;
+	free(stack_b);
 	while (stack_b->nx != NULL)
-	{
 		stack_b = stack_b->nx;
-		i++;
-	}
 	stack_b->nx = end_node;
-	stack_b = *head;
+	end_node->prev = stack_b;
+	stack_b = head;
 	printf("rb\n");
 	return (stack_b);
 }
@@ -82,6 +82,7 @@ stack	*reverse_rotate_b(stack *stack_b)
 	first_node->val = temp->nx->val;
 	first_node->index = temp->nx->index;
 	temp->nx = NULL;
+	free(temp->nx);
 	first_node->nx = *head;
 	stack_b = first_node;
 	printf("rrb\n");

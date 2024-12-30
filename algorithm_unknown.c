@@ -6,7 +6,7 @@
 /*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 15:22:57 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/27 15:07:45 by naomi            ###   ########.fr       */
+/*   Updated: 2024/12/30 23:02:35 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,7 @@ int	algorithm(stack *stack_a, int argc)
 		algori_under100(stack_a, stack_b, argc);
 	else if (argc > 100)
 		algori_under500(stack_a, stack_b, argc);
+	free_stack(stack_a);
+	free_stack(stack_b);
 	return (0);
 }

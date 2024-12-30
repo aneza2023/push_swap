@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   creating_stack_a.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:36:36 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/09 12:56:09 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/30 23:08:35 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ stack	*add_index(int *arr_arg, stack *stack_a, int argc)
 		(temp) = (temp)->nx;
 	}
 	temp = stack_a;
+	free(arr_arg);
 	algorithm(temp, argc);
 	return (temp);
 }

@@ -39,9 +39,6 @@ int	repetition(stack *stack_a)
 {
 	stack	*temp;
 
-	temp = (stack *)malloc(sizeof(stack));
-	if (temp == NULL)
-		return (1);
 	temp = stack_a;
 	while (temp != NULL)
 	{

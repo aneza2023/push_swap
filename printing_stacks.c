@@ -3,20 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   printing_stacks.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
+/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 14:29:02 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/11/28 16:00:37 by ahavrank         ###   ########.fr       */
+/*   Updated: 2024/12/30 23:28:38 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "push_swap.h"
 
 int	printing_stacks(stack *stack_a)
 {
 	if (stack_a == NULL)
 	{
-		printf("ERROR PRINT");
+		write(1, "ERROR PRINT", 11);
 		return (1);
 	}
 	while (stack_a != NULL)
@@ -25,4 +26,4 @@ int	printing_stacks(stack *stack_a)
 		stack_a = stack_a ->nx;
 	}
 	return (0);
-}
+} */

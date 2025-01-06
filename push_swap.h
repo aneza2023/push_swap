@@ -6,7 +6,7 @@
 /*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/30 23:02:17 by naomi            ###   ########.fr       */
+/*   Updated: 2025/01/06 19:23:38 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,9 @@ int		first_round(stack *stack_a, stack *stack_b);
 int		second_round(stack *stack_a, stack *stack_b);
 int		third_round(stack *stack_a);
 int		checking_input(char *argv);
-int	algori_under500(stack *stack_a, stack *stack_b, int argc);
-int	rearanging_stack_b(stack *stack_a, stack *stack_b, int argc);
-int	where_biggest(stack *stack_b, int argc);
-int	free_stack(stack *stacka);
+int		algori_under500(stack *stack_a, stack *stack_b, int argc);
+int		rearanging_stack_b(stack *stack_a, stack *stack_b, int argc);
+int		where_biggest(stack *stack_b, int argc);
+int		free_stack(stack *stacka);
 
 #endif

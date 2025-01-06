@@ -10,7 +10,6 @@ int	free_stack(stack *stacka)
 		temp = stacka;
 		stacka = stacka->nx;
 		free(temp);
-		printf("free\n");
 	}
 	return (0);
 }

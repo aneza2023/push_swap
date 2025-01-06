@@ -6,7 +6,7 @@
 /*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 15:22:57 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/30 23:02:35 by naomi            ###   ########.fr       */
+/*   Updated: 2024/12/30 23:30:21 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ int	algorithm(stack *stack_a, int argc)
 
 	if (repetition(stack_a) == 1)
 	{
-		printf("Error\n");
+		write(2, "Error\n", 6);
+		free_stack(stack_a);
 		return (1);
 	}
 	stack_b = NULL;

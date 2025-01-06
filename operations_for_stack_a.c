@@ -6,7 +6,7 @@
 /*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:27 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/30 22:39:12 by naomi            ###   ########.fr       */
+/*   Updated: 2024/12/30 23:24:39 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,6 @@ stack	*reverse_rotate_a(stack *stack_a)
 int	push_to_a(stack **stack_a, stack **stack_b)
 {
 	stack	*temp;
-	stack	*tempa;
 
 	if (*stack_b == NULL)
 		return (0);

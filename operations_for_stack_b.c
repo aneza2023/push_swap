@@ -6,12 +6,13 @@
 /*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:17 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/30 22:42:14 by naomi            ###   ########.fr       */
+/*   Updated: 2025/01/06 19:22:45 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+//same as stack_a
 stack	*swap_in_stack_b(stack *stack_b)
 {
 	stack	*temp;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:20:10 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/09 08:17:04 by codespace        ###   ########.fr       */
+/*   Updated: 2024/12/30 23:25:48 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,17 @@ int	checking_input(char *argv)
 	{
 		if (is_not_num(argv[i]) == 1)
 		{
-			printf("Error\n");
+			write(2, "Error\n", 6);
 			return (1);
 		}
 		if ((is_sign(argv[i]) == 1) && (is_num(argv[i + 1]) != 1))
 		{
-			printf("Error\n");
+			write(2, "Error\n", 6);
 			return (1);
 		}	
 		if (modified_atoi(argv) > 2147483647 || modified_atoi(argv) < -2147483648)
 		{
-			printf("Error\n");
+			write(2, "Error\n", 6);
 			return (1);
 		}
 		i++;
@@ -48,7 +48,7 @@ int	main(int argc, char *argv[])
 
 	if (argc <= 1 || (argc == 2 && !argv[1][0])) 
 	{
-		printf("Error\n");
+		write(2, "Error\n", 6);
 		return (1);
 	}
 	stack_a = NULL;

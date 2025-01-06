@@ -6,7 +6,7 @@
 /*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:36:36 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/30 23:34:23 by naomi            ###   ########.fr       */
+/*   Updated: 2025/01/06 19:29:03 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ stack	*inserting_arg(stack *stack_a, int arg)
 	{
 		write(2, "Error\n", 6);
 		free_stack(stack_a);
-		exit(1);
 	}
 	if (stack_a != NULL)
 		stack_a->prev = new_node;

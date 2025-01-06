@@ -11,5 +11,6 @@ int	free_stack(stack *stacka)
 		stacka = stacka->nx;
 		free(temp);
 	}
+	exit(1);
 	return (0);
 }

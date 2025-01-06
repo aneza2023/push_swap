@@ -6,12 +6,13 @@
 /*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:27 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/30 23:24:39 by naomi            ###   ########.fr       */
+/*   Updated: 2025/01/06 19:28:04 by naomi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+//probably have to redo cause of number of lines
 stack	*swap_in_stack_a(stack *stack_a)
 {
 	stack	*temp;
@@ -22,7 +23,7 @@ stack	*swap_in_stack_a(stack *stack_a)
 	temp = allocation();
 	tempnx = allocation();
 	if (temp == NULL || tempnx == NULL)
-		return (stack_a);
+		free_stack(stack_a);
 	temp->index = stack_a->index;
 	temp->val = stack_a->val;
 	temp->nx = stack_a->nx;

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm_unknown.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 15:22:57 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/30 23:30:21 by naomi            ###   ########.fr       */
+/*   Updated: 2025/01/09 14:32:21 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	algorithm(stack *stack_a, int argc)
+int	algorithm(t_stack *stack_a, int argc)
 {
-	stack	*stack_b;
+	t_stack	*stack_b;
 
 	if (repetition(stack_a) == 1)
 	{
@@ -35,5 +35,12 @@ int	algorithm(stack *stack_a, int argc)
 		algori_under500(stack_a, stack_b, argc);
 	free_stack(stack_a);
 	free_stack(stack_b);
+	return (0);
+}
+
+int	algori_for_2(t_stack *stack_a)
+{
+	if (stack_a->val > stack_a->nx->val)
+		swap_in_stack_a(stack_a);
 	return (0);
 }

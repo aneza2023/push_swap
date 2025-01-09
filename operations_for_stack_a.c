@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   operations_for_stack_a.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:11:27 by ahavrank          #+#    #+#             */
-/*   Updated: 2025/01/06 19:28:04 by naomi            ###   ########.fr       */
+/*   Updated: 2025/01/09 14:34:22 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 //probably have to redo cause of number of lines
-stack	*swap_in_stack_a(stack *stack_a)
+t_stack	*swap_in_stack_a(t_stack *stack_a)
 {
-	stack	*temp;
-	stack	*tempnx;
+	t_stack	*temp;
+	t_stack	*tempnx;
 
 	if (stack_a->nx == NULL)
 		return (stack_a);
@@ -40,10 +40,10 @@ stack	*swap_in_stack_a(stack *stack_a)
 	return (stack_a);
 }
 
-stack	*rotate_stack_a(stack *stack_a)
+t_stack	*rotate_stack_a(t_stack *stack_a)
 {
-	stack	*head;
-	stack	*temp;
+	t_stack	*head;
+	t_stack	*temp;
 
 	if (stack_a->nx == NULL)
 		return (stack_a);
@@ -59,10 +59,9 @@ stack	*rotate_stack_a(stack *stack_a)
 	return (head);
 }
 
-stack	*reverse_rotate_a(stack *stack_a)
+t_stack	*reverse_rotate_a(t_stack *stack_a)
 {
-	stack	*head;
-	stack	*temp;
+	t_stack	*temp;
 
 	if (stack_a->nx == NULL)
 		return (stack_a);
@@ -77,9 +76,9 @@ stack	*reverse_rotate_a(stack *stack_a)
 	return (temp);
 }
 
-int	push_to_a(stack **stack_a, stack **stack_b)
+int	push_to_a(t_stack **stack_a, t_stack **stack_b)
 {
-	stack	*temp;
+	t_stack	*temp;
 
 	if (*stack_b == NULL)
 		return (0);

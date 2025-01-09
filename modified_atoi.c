@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   modified_atoi.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 08:20:42 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/06 15:26:18 by codespace        ###   ########.fr       */
+/*   Updated: 2025/01/09 14:24:58 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-long int	modified_atoi(const char *nptr)
+long int	mod_atoi(const char *nptr)
 {
-	int	i;
+	int			i;
 	long int	result;
-	int	sign;
+	int			sign;
 
 	i = 0;
 	result = 0;

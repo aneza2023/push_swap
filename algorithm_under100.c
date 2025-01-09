@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm_under100.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 09:09:49 by codespace         #+#    #+#             */
-/*   Updated: 2024/12/27 15:17:50 by naomi            ###   ########.fr       */
+/*   Updated: 2025/01/09 14:32:21 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	algori_under100(stack *stack_a, stack *stack_b, int argc)
+int	algori_under100(t_stack *stack_a, t_stack *stack_b, int argc)
 {
-	stack			**stack_a_fp;
-	stack			**stack_b_fp;
+	t_stack			**stack_a_fp;
+	t_stack			**stack_b_fp;
 	static int		chunk;
 	int				k;
 	int				old_argc;
@@ -28,7 +28,7 @@ int	algori_under100(stack *stack_a, stack *stack_b, int argc)
 		stack_a = cheapest_numer(stack_a, chunk, argc);
 		stack_a_fp = &stack_a;
 		stack_b_fp = &stack_b;
-		stack_b = checking_stack_b(stack_b); 
+		stack_b = checking_stack_b(stack_b);
 		push_to_b(stack_a_fp, stack_b_fp);
 		k++;
 		if (k == old_argc / 5)
@@ -41,7 +41,7 @@ int	algori_under100(stack *stack_a, stack *stack_b, int argc)
 	return (0);
 }
 
-stack	*cheapest_numer(stack *stack_a, int chunk, int argc)
+t_stack	*cheapest_numer(t_stack *stack_a, int chunk, int argc)
 {
 	int	half;
 	int	first;
@@ -69,10 +69,10 @@ stack	*cheapest_numer(stack *stack_a, int chunk, int argc)
 	return (stack_a);
 }
 
-int	first_index(stack *stack_a, int ch, int argc)
+int	first_index(t_stack *stack_a, int ch, int argc)
 {
 	int				i;
-	stack			*tempfront;
+	t_stack			*tempfront;
 
 	tempfront = stack_a;
 	i = 1;
@@ -90,11 +90,11 @@ int	first_index(stack *stack_a, int ch, int argc)
 	return (i);
 }
 
-int	second_index(stack *stack_a, int ch, int argc)
+int	second_index(t_stack *stack_a, int ch, int argc)
 {
 	int		i;
-	stack	*tempback;
-	stack	*temp;
+	t_stack	*tempback;
+	t_stack	*temp;
 
 	temp = stack_a;
 	while (temp->nx != NULL)
@@ -117,7 +117,7 @@ int	second_index(stack *stack_a, int ch, int argc)
 	return (i);
 }
 
-stack	*checking_stack_b(stack *stack_b)
+t_stack	*checking_stack_b(t_stack *stack_b)
 {
 	if (stack_b == NULL || stack_b->nx == NULL)
 	{

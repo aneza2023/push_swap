@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   creating_stack_a.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:36:36 by codespace         #+#    #+#             */
-/*   Updated: 2025/01/06 19:29:03 by naomi            ###   ########.fr       */
+/*   Updated: 2025/01/09 14:32:21 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-stack	*inserting_arg(stack *stack_a, int arg)
+t_stack	*inserting_arg(t_stack *stack_a, int arg)
 {
-	stack	*new_node;
+	t_stack	*new_node;
 
-	new_node = (stack *)malloc(sizeof(stack));
+	new_node = (t_stack *)malloc(sizeof(t_stack));
 	if (new_node == NULL)
 	{
 		write(2, "Error\n", 6);
@@ -36,14 +36,14 @@ int	*sorting_for_index(int *arr_arg, int argc)
 	int	j;
 	int	temp;
 
-
 	j = 1;
 	while (j < argc)
 	{
 		i = 1;
 		while (i < argc - j)
 		{
-			if (arr_arg[i] >= arr_arg[i + 1]){
+			if (arr_arg[i] >= arr_arg[i + 1])
+			{
 				temp = arr_arg[i + 1];
 				arr_arg[i + 1] = arr_arg[i];
 				arr_arg[i] = temp;
@@ -55,10 +55,10 @@ int	*sorting_for_index(int *arr_arg, int argc)
 	return (arr_arg);
 }
 
-stack	*add_index(int *arr_arg, stack *stack_a, int argc)
+t_stack	*add_index(int *arr_arg, t_stack *stack_a, int argc)
 {
 	int		i;
-	stack	*temp;
+	t_stack	*temp;
 
 	arr_arg = sorting_for_index(arr_arg, argc);
 	temp = stack_a;

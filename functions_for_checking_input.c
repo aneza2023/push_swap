@@ -1,12 +1,12 @@
-	/* ************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   functions_for_checking_input.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:08:31 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/02 14:16:36 by codespace        ###   ########.fr       */
+/*   Updated: 2025/01/09 14:32:21 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ int	is_sign(int c)
 	return (0);
 }
 
-int	repetition(stack *stack_a)
+int	repetition(t_stack *stack_a)
 {
-	stack	*temp;
+	t_stack	*temp;
 
 	temp = stack_a;
 	while (temp != NULL)
@@ -53,7 +53,7 @@ int	repetition(stack *stack_a)
 						return (1);
 					stack_a = stack_a->nx;
 				}
-			}	
+			}
 			stack_a = stack_a->nx;
 		}
 		temp = temp->nx;

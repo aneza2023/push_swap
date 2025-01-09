@@ -3,23 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm_under5.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: naomi <naomi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 15:58:56 by ahavrank          #+#    #+#             */
-/*   Updated: 2024/12/30 22:58:28 by naomi            ###   ########.fr       */
+/*   Updated: 2025/01/09 14:48:29 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	algori_for_2(stack *stack_a)
-{
-	if (stack_a->val > stack_a->nx->val)
-		swap_in_stack_a(stack_a);
-	return (0);
-}
-
-stack	*algori_for_3(stack *sa)
+t_stack	*algori_for_3(t_stack *sa)
 {
 	if ((sa->val >= sa->nx->val) && (sa->nx->val <= sa->nx->nx->val))
 	{
@@ -45,10 +38,11 @@ stack	*algori_for_3(stack *sa)
 	}
 	return (sa);
 }
-int	algori_under_5(stack *stack_a, stack *stack_b, int argc)
+
+int	algori_under_5(t_stack *stack_a, t_stack *stack_b, int argc)
 {
-	stack	**stack_a_fp;
-	stack	**stack_b_fp;
+	t_stack	**stack_a_fp;
+	t_stack	**stack_b_fp;
 
 	stack_a_fp = &stack_a;
 	stack_b_fp = &stack_b;
@@ -62,43 +56,45 @@ int	algori_under_5(stack *stack_a, stack *stack_b, int argc)
 	return (0);
 }
 
-int	first_round(stack *stack_a, stack *stack_b)
+void	first_round(t_stack *stack_a, t_stack *b)
 {
-	stack	**stack_a_fp;
-	stack	**stack_b_fp;
+	t_stack	**stack_a_fp;
+	t_stack	**stack_b_fp;
 
 	stack_a_fp = &stack_a;
-	stack_b_fp = &stack_b;
-	if (stack_b->index == 5 && stack_b->nx->index != 4){
+	stack_b_fp = &b;
+	if (b->index == 5 && b->nx->index != 4)
+	{
 		push_to_a(stack_a_fp, stack_b_fp);
 		stack_a = rotate_stack_a(stack_a);
 	}
- 	else if (stack_b->index == 4){
+	else if (b->index == 4)
+	{
 		stack_a = reverse_rotate_a(stack_a);
 		push_to_a(stack_a_fp, stack_b_fp);
 	}
-	else if (stack_b->index == 3){	
+	else if (b->index == 3)
+	{
 		push_to_a(stack_a_fp, stack_b_fp);
 		stack_a = swap_in_stack_a(stack_a);
-		push_to_a(stack_a_fp, stack_b_fp);	
-	}
-	else if (stack_b->index == 2 || (stack_b->index == 5 && stack_b->nx->index == 4)){
-		push_to_a(stack_a_fp, stack_b_fp);
 		push_to_a(stack_a_fp, stack_b_fp);
 	}
-	second_round(stack_a, stack_b);
-	return (0);
+	else if (b->index == 2 || (b->index == 5 && b->nx->index == 4))
+		help_for_first_round(stack_a_fp, stack_b_fp);
+	second_round(stack_a, b);
 }
 
-int		second_round(stack *stack_a, stack *stack_b)
-{	stack	**stack_a_fp;
-	stack	**stack_b_fp;
+int	second_round(t_stack *stack_a, t_stack *stack_b)
+{
+	t_stack	**stack_a_fp;
+	t_stack	**stack_b_fp;
 
 	stack_a_fp = &stack_a;
 	stack_b_fp = &stack_b;
 	if (stack_a->index > stack_a->nx->index)
 		stack_a = swap_in_stack_a(stack_a);
-	if (stack_b != NULL){
+	if (stack_b != NULL)
+	{
 		if (stack_b->index < stack_a->nx->index)
 			push_to_a(stack_a_fp, stack_b_fp);
 		else
@@ -110,15 +106,17 @@ int		second_round(stack *stack_a, stack *stack_b)
 	return (0);
 }
 
-int	third_round(stack *stack_a)
+int	third_round(t_stack *stack_a)
 {
 	if (stack_a->index > stack_a->nx->index)
 		stack_a = swap_in_stack_a(stack_a);
-	if (stack_a->index == 2 && stack_a->nx->index == 4){
+	if (stack_a->index == 2 && stack_a->nx->index == 4)
+	{
 		stack_a = reverse_rotate_a(stack_a);
 		stack_a = swap_in_stack_a(stack_a);
 	}
-	if (stack_a->index == 1 && stack_a->nx->index == 4){
+	if (stack_a->index == 1 && stack_a->nx->index == 4)
+	{
 		stack_a = reverse_rotate_a(stack_a);
 		stack_a = swap_in_stack_a(stack_a);
 		stack_a = reverse_rotate_a(stack_a);

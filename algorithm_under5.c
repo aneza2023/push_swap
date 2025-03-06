@@ -6,7 +6,7 @@
 /*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 15:58:56 by ahavrank          #+#    #+#             */
-/*   Updated: 2025/01/09 14:48:29 by ahavrank         ###   ########.fr       */
+/*   Updated: 2025/03/06 19:43:48 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	first_round(t_stack *stack_a, t_stack *b)
 		stack_a = reverse_rotate_a(stack_a);
 		push_to_a(stack_a_fp, stack_b_fp);
 	}
-	else if (b->index == 3)
+	else if (b->index == 3 && b->nx != NULL)
 	{
 		push_to_a(stack_a_fp, stack_b_fp);
 		stack_a = swap_in_stack_a(stack_a);

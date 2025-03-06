@@ -6,7 +6,7 @@
 /*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 15:22:57 by ahavrank          #+#    #+#             */
-/*   Updated: 2025/01/09 14:32:21 by ahavrank         ###   ########.fr       */
+/*   Updated: 2025/03/06 19:42:54 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int	algorithm(t_stack *stack_a, int argc)
 		free_stack(stack_a);
 		return (1);
 	}
+	if (correct_order(stack_a) == 1)
+		return (1);
 	stack_b = NULL;
 	if (argc == 3)
 		algori_for_2(stack_a);

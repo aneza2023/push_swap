@@ -6,7 +6,7 @@
 /*   By: ahavrank <ahavrank@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:18:48 by ahavrank          #+#    #+#             */
-/*   Updated: 2025/03/06 11:46:00 by ahavrank         ###   ########.fr       */
+/*   Updated: 2025/03/06 19:43:03 by ahavrank         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,6 @@ int			rearanging_stack_b(t_stack *stack_a, t_stack *stack_b, int argc);
 int			where_biggest(t_stack *stack_b, int argc);
 int			free_stack(t_stack *stacka);
 void		help_for_first_round(t_stack **stack_a_fp, t_stack **stack_b_fp);
+int			correct_order(t_stack *stack_a);
 
 #endif
